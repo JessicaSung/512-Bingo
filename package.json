@@ -1,0 +1,26 @@
+{
+  "name": "512-bingo",
+  "version": "1.0.0",
+  "description": "Project #2",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JessicaSung/512-Bingo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JessicaSung/512-Bingo/issues"
+  },
+  "homepage": "https://github.com/JessicaSung/512-Bingo#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "express-handlebars": "^3.0.0",
+    "method-override": "^2.3.6",
+    "mysql": "^2.12.0"
+  }
+}

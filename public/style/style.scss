@@ -1,10 +1,12 @@
 //-------colors-------------
+
 $orage: rgb(246, 189, 88);
 $blue: rgb(97, 197, 190);
 $dark-blue: rgb(72, 81, 95);
 $red: rgb(233, 94, 108);
 
 //--------font---------------
+
 @font-face {
     font-family: 'Nord Bold';
     src: url('font/nord-bold-webfont.woff2') format('woff2'),
@@ -17,4 +19,70 @@ $red: rgb(233, 94, 108);
 
 body {
   font-family: 'Nord Bold';
+  background-image: url('images/halftone.png');
+  letter-spacing: 4px;
+}
+
+.center {
+  text-align: center;
+}
+
+.center-x {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0);
+}
+
+.round {
+  border-radius: 100%;
+}
+
+.big-box {
+  border: solid 3px;
+  font-size: 25px;
+  padding: 5px;
+  display: inline-block;
+  text-align: center;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+// -------landing page----------
+
+#landing-row {
+  width: 320px;
+}
+
+.landing-wrapper {
+  margin-top: 75px;
+}
+
+.big-circle {
+  background-color: rgba(255, 255, 255, 0.5);
+  height: 260px;
+  width: 260px;
+}
+
+.big-logo {
+  width: 275px;
+  top: 110px;
+}
+
+#signIn, #signUp {
+  width: 150px;
+}
+
+#signIn {
+  border-color: $blue;
+  color: $blue;
+  margin-top: 300px;
+  margin-bottom: 5px;
+}
+
+#signUp {
+  border-color: $dark-blue;
+  color: $dark-blue;
 }

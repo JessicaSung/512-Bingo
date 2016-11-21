@@ -1,0 +1,61 @@
+@font-face {
+  font-family: 'Nord Bold';
+  src: url("font/nord-bold-webfont.woff2") format("woff2"), url("font/nord-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+body {
+  font-family: 'Nord Bold';
+  background-image: url("images/halftone.png");
+  letter-spacing: 4px; }
+
+.center {
+  text-align: center; }
+
+.center-x {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0); }
+
+.round {
+  border-radius: 100%; }
+
+.big-box {
+  border: solid 3px;
+  font-size: 25px;
+  padding: 5px;
+  display: inline-block;
+  text-align: center; }
+  .big-box:hover {
+    cursor: pointer; }
+
+#landing-row {
+  width: 320px; }
+
+.landing-wrapper {
+  margin-top: 75px; }
+
+.big-circle {
+  background-color: rgba(255, 255, 255, 0.5);
+  height: 260px;
+  width: 260px; }
+
+.big-logo {
+  width: 275px;
+  top: 110px; }
+
+#signIn, #signUp {
+  width: 150px; }
+
+#signIn {
+  border-color: #61c5be;
+  color: #61c5be;
+  margin-top: 300px;
+  margin-bottom: 5px; }
+
+#signUp {
+  border-color: #48515f;
+  color: #48515f; }
+
+/*# sourceMappingURL=style.css.map */

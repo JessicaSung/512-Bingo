@@ -1,6 +1,6 @@
 //-------colors-------------
 
-$orage: rgb(246, 189, 88);
+$orange: rgb(246, 189, 88);
 $blue: rgb(97, 197, 190);
 $dark-blue: rgb(72, 81, 95);
 $red: rgb(233, 94, 108);
@@ -15,12 +15,28 @@ $red: rgb(233, 94, 108);
     font-style: normal;
 }
 
+// -----color classes--------
+
+.orange {
+  color: $orange;
+  background-color: transparent !important;
+}
+
+.dark-blue {
+  color: $dark-blue;
+}
+
+
 //----element styles---------
 
 body {
   font-family: 'Nord Bold';
   background-image: url('images/halftone.png');
   letter-spacing: 4px;
+}
+
+.relative {
+  position: relative;
 }
 
 .center {
@@ -50,6 +66,46 @@ body {
   }
 }
 
+input[type=text] {
+  border-bottom: solid 3px;
+  color: $blue;
+}
+
+input[type=text]:focus:not([read-only]) {
+  box-shadow: none;
+  border-width: 3px;
+}
+
+.input-field label {
+  color: $blue;
+  letter-spacing: 2px;
+}
+
+.medium-button {
+  font-size: 16px;
+  letter-spacing: 2px;
+  border: solid 3px;
+  background-color: transparent;
+  padding-top: 6px;
+}
+
+.corner-circle {
+  background-color: rgba(255, 255, 255, 0.6);
+  position: absolute;
+  top: -47px;
+  left: -38px;
+  width: 150px;
+  height: 150px;
+}
+
+.corner-text {
+  width: 100px;
+  color: $orange;
+  position: absolute;
+  top: 10px;
+  left: 15px;
+}
+
 // -------landing page----------
 
 #landing-row {
@@ -64,6 +120,7 @@ body {
   background-color: rgba(255, 255, 255, 0.5);
   height: 260px;
   width: 260px;
+  z-index: -1;
 }
 
 .big-logo {
@@ -85,4 +142,31 @@ body {
 #signUp {
   border-color: $dark-blue;
   color: $dark-blue;
+}
+
+.landing-form {
+  // display: none;
+  width: 275px;
+  margin: auto;
+  margin-top: 150px;
+  h3 {
+    margin-bottom: 40px;
+  }
+  button {
+    float: right;
+  }
+}
+
+#sign-in-form {
+  input {
+    border-color: $blue;
+    &:focus {
+      color: $blue;
+      border-color: $blue;
+    }
+  }
+  button {
+    color: $dark-blue;
+    border-color: $dark-blue;
+  }
 }

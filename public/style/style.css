@@ -10,6 +10,14 @@
 .dark-blue {
   color: #48515f; }
 
+.blue {
+  color: #61c5be;
+  background-color: transparent !important; }
+
+.red {
+  color: #e95e6c;
+  background-color: transparent !important; }
+
 body {
   font-family: 'Nord Bold';
   background-image: url("images/halftone.png");
@@ -41,8 +49,7 @@ body {
     cursor: pointer; }
 
 input[type=text] {
-  border-bottom: solid 3px;
-  color: #61c5be; }
+  border-bottom: solid 3px; }
 
 input[type=text]:focus:not([read-only]) {
   box-shadow: none;
@@ -74,6 +81,10 @@ input[type=text]:focus:not([read-only]) {
   top: 10px;
   left: 15px; }
 
+.form-error {
+  color: #48515f;
+  display: none; }
+
 #landing-row {
   width: 320px; }
 
@@ -100,25 +111,43 @@ input[type=text]:focus:not([read-only]) {
   margin-bottom: 5px; }
 
 #signUp {
-  border-color: #48515f;
-  color: #48515f; }
+  border-color: #e95e6c;
+  color: #e95e6c; }
+
+#landing-corner-logo, .landing-form {
+  display: none; }
 
 .landing-form {
   width: 275px;
   margin: auto;
   margin-top: 150px; }
   .landing-form h3 {
-    margin-bottom: 40px; }
+    margin-bottom: 40px;
+    color: #48515f;
+    text-align: center; }
   .landing-form button {
     float: right; }
 
-#sign-in-form input {
-  border-color: #61c5be; }
-  #sign-in-form input:focus {
+#sign-in-form input[type=text] {
+  border-color: #61c5be;
+  color: #61c5be; }
+  #sign-in-form input[type=text]:focus {
     color: #61c5be;
     border-color: #61c5be; }
 #sign-in-form button {
-  color: #48515f;
-  border-color: #48515f; }
+  color: #61c5be;
+  border-color: #61c5be; }
+
+#sign-up-form input[type=text] {
+  border-color: #e95e6c;
+  color: #e95e6c; }
+  #sign-up-form input[type=text]:focus {
+    color: #e95e6c;
+    border-color: #e95e6c; }
+#sign-up-form label {
+  color: #e95e6c; }
+#sign-up-form button {
+  color: #e95e6c;
+  border-color: #e95e6c; }
 
 /*# sourceMappingURL=style.css.map */

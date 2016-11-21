@@ -1,0 +1,20 @@
+//-------colors-------------
+$orage: rgb(246, 189, 88);
+$blue: rgb(97, 197, 190);
+$dark-blue: rgb(72, 81, 95);
+$red: rgb(233, 94, 108);
+
+//--------font---------------
+@font-face {
+    font-family: 'Nord Bold';
+    src: url('font/nord-bold-webfont.woff2') format('woff2'),
+         url('font/nord-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+//----element styles---------
+
+body {
+  font-family: 'Nord Bold';
+}

@@ -1,0 +1,102 @@
+<!-- Initial landing -->
+<section id="landing">
+  <div class="center-x" id="landing-row">
+    <div class="center landing-wrapper">
+      <!-- logo image and circle -->
+      <div class="round big-circle center-x">
+      </div>
+      <img src="style/images/big-logo.png" alt="512 Bingo" class="big-logo center-x"/>
+      <!-- sign in button -->
+      <div class="row">
+        <div class="col s12 center">
+          <div class="big-box" id="signIn">
+            sign in
+          </div>
+        </div>
+      </div>
+      <!-- sign up button -->
+      <div class="row">
+        <div class="col s12 center">
+          <div class="big-box" id="signUp">
+            sign up
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- corner logo -->
+<div id="landing-corner-logo">
+  <div class="round corner-circle"></div>
+  <h5 class="corner-text">512 BINGO</h5>
+</div>
+
+<!-- sign in form -->
+<section id="signInView">
+  <p class="toggle-sign" id="toggleSignUp">
+    sign up
+  </p>
+  <div class="landing-form">
+    <h3>SIGN IN</h3>
+    <div id="sign-in-form">
+      <div class="row">
+        <div class="input-field">
+          <input type="text" id="emailAddress">
+          <label for="emailAddress">email address</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field">
+          <input type="text" id="password">
+          <label for="password">password</label>
+        </div>
+      </div>
+      <div class="row">
+        <button class="medium-button" id="signInButton">sign in</button>
+      </div>
+    </div>
+    <p class="form-error"></p>
+  </div>
+</section>
+
+<!-- sign up form -->
+<section id="signUpView">
+  <p class="toggle-sign" id="toggleSignIn">
+    sign in
+  </p>
+  <div class="landing-form">
+    <h3>SIGN UP</h3>
+    <div id="sign-up-form">
+      <div class="row">
+        <div class="input-field">
+          <input type="text" id="emailAddressUp">
+          <label for="emailAddressUp">email address</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field">
+          <input type="text" id="passwordUp">
+          <label for="passwordUp">password</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field">
+          <input type="text" id="confirmPassword">
+          <label for="confirmPassword">confirm password</label>
+        </div>
+      </div>
+      <div class="row">
+        <button class="medium-button" id="signUpButton">sign up</button>
+      </div>
+    </div>
+    <p class="form-error"></p>
+  </div>
+</section>
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<!-- Materialize Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+<!-- local js -->
+<script src="js/landing.js" charset="utf-8"></script>

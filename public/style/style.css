@@ -75,7 +75,8 @@ button:focus {
   top: -47px;
   left: -38px;
   width: 150px;
-  height: 150px; }
+  height: 150px;
+  z-index: -1; }
 
 .corner-text {
   width: 100px;
@@ -87,6 +88,15 @@ button:focus {
 .form-error {
   color: #48515f;
   display: none; }
+
+.menu-list li {
+  font-size: 24px;
+  border-bottom: solid 3px;
+  padding-bottom: 5px;
+  width: 250px;
+  margin: 60px auto;
+  text-align: center;
+  text-transform: uppercase; }
 
 #landing {
   position: relative;
@@ -173,5 +183,90 @@ button:focus {
   color: #48515f;
   font-size: 11px;
   letter-spacing: 2px; }
+
+#landing-corner-logo {
+  display: block; }
+
+.mobile-menu-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px; }
+  .mobile-menu-icon i {
+    color: #48515f; }
+
+.mobile-main-menu {
+  margin-top: 150px; }
+  .mobile-main-menu .menu-list li:nth-child(4n+1) {
+    color: #f6bd58;
+    border-bottom-color: #f6bd58; }
+  .mobile-main-menu .menu-list li:nth-child(2n) {
+    color: #e95e6c;
+    border-bottom-color: #e95e6c; }
+  .mobile-main-menu .menu-list li:nth-child(3n) {
+    color: #61c5be;
+    border-bottom-color: #61c5be; }
+  .mobile-main-menu .menu-list li:nth-child(4n) {
+    color: #48515f;
+    border-bottom-color: #48515f; }
+
+.mobile-drop-menu {
+  display: none;
+  z-index: 3;
+  margin-top: 150px; }
+
+#x {
+  display: none; }
+
+.sign-out {
+  font-size: 12px;
+  color: #48515f;
+  letter-spacing: 2px;
+  position: absolute;
+  top: 0px;
+  right: 20px; }
+
+.main-menu {
+  margin: 0 auto;
+  margin-top: 150px;
+  width: 500px;
+  text-align: center; }
+
+.menu-box {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  font-size: 30px;
+  text-transform: uppercase;
+  border: solid 3px;
+  padding: 10px;
+  display: inline-block;
+  clear: both;
+  margin-bottom: 30px; }
+  .menu-box:nth-child(2n) {
+    color: #48515f;
+    border-color: #48515f; }
+  .menu-box:nth-child(3n+1) {
+    float: left;
+    clear: none; }
+  .menu-box:nth-child(3n) {
+    float: right;
+    clear: none;
+    color: #e95e6c;
+    border-color: #e95e6c; }
+  .menu-box:nth-child(5n+1) {
+    border-color: #f6bd58;
+    color: #f6bd58; }
+  .menu-box:nth-child(4n) {
+    color: #e95e6c;
+    border-color: #e95e6c; }
+  .menu-box:nth-child(5n) {
+    color: #61c5be;
+    border-color: #61c5be; }
+
+.hold-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); }
 
 /*# sourceMappingURL=style.css.map */

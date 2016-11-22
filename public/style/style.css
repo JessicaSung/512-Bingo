@@ -75,7 +75,8 @@ button:focus {
   top: -47px;
   left: -38px;
   width: 150px;
-  height: 150px; }
+  height: 150px;
+  z-index: -1; }
 
 .corner-text {
   width: 100px;
@@ -207,6 +208,14 @@ button:focus {
   .mobile-main-menu .menu-list li:nth-child(4n) {
     color: #48515f;
     border-bottom-color: #48515f; }
+
+.mobile-drop-menu {
+  display: none;
+  z-index: 3;
+  margin-top: 150px; }
+
+#x {
+  display: none; }
 
 .sign-out {
   font-size: 12px;

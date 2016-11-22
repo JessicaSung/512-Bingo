@@ -109,6 +109,7 @@ button:focus {
   left: -38px;
   width: 150px;
   height: 150px;
+  z-index: -1;
 }
 
 .corner-text {
@@ -284,6 +285,16 @@ button:focus {
       border-bottom-color: $dark-blue;
     }
   }
+}
+
+.mobile-drop-menu {
+  display: none;
+  z-index: 3;
+  margin-top: 150px;
+}
+
+#x {
+  display: none;
 }
 
 .sign-out {

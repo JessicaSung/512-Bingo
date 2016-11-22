@@ -88,6 +88,15 @@ button:focus {
   color: #48515f;
   display: none; }
 
+.menu-list li {
+  font-size: 24px;
+  border-bottom: solid 3px;
+  padding-bottom: 5px;
+  width: 250px;
+  margin: 60px auto;
+  text-align: center;
+  text-transform: uppercase; }
+
 #landing {
   position: relative;
   right: 0; }
@@ -173,5 +182,30 @@ button:focus {
   color: #48515f;
   font-size: 11px;
   letter-spacing: 2px; }
+
+#landing-corner-logo {
+  display: block; }
+
+.mobile-menu-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px; }
+  .mobile-menu-icon i {
+    color: #48515f; }
+
+.mobile-main-menu {
+  margin-top: 150px; }
+  .mobile-main-menu .menu-list li:nth-child(4n+1) {
+    color: #f6bd58;
+    border-bottom-color: #f6bd58; }
+  .mobile-main-menu .menu-list li:nth-child(2n) {
+    color: #e95e6c;
+    border-bottom-color: #e95e6c; }
+  .mobile-main-menu .menu-list li:nth-child(3n) {
+    color: #61c5be;
+    border-bottom-color: #61c5be; }
+  .mobile-main-menu .menu-list li:nth-child(4n) {
+    color: #48515f;
+    border-bottom-color: #48515f; }
 
 /*# sourceMappingURL=style.css.map */

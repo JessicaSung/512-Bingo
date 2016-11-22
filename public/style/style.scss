@@ -124,6 +124,18 @@ button:focus {
   display: none;
 }
 
+.menu-list {
+  li {
+    font-size: 24px;
+    border-bottom: solid 3px;
+    padding-bottom: 5px;
+    width: 250px;
+    margin: 60px auto;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+
 // -------landing page----------
 #landing {
   position: relative;
@@ -235,4 +247,41 @@ button:focus {
   color: $dark-blue;
   font-size: 11px;
   letter-spacing: 2px;
+}
+
+// ------------main menu--------------
+
+#landing-corner-logo {
+  display: block;
+}
+
+.mobile-menu-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  i {
+    color: $dark-blue;
+  }
+}
+
+.mobile-main-menu {
+  margin-top: 150px;
+  .menu-list li {
+    &:nth-child(4n+1) {
+      color: $orange;
+      border-bottom-color: $orange;
+    }
+    &:nth-child(2n) {
+      color: $red;
+      border-bottom-color: $red;
+    }
+    &:nth-child(3n) {
+      color: $blue;
+      border-bottom-color: $blue;
+    }
+    &:nth-child(4n) {
+      color: $dark-blue;
+      border-bottom-color: $dark-blue;
+    }
+  }
 }

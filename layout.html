@@ -51,23 +51,23 @@
       </p>
       <div class="landing-form">
         <h3>SIGN IN</h3>
-        <form class="" action="" method="post" id="sign-in-form">
+        <div id="sign-in-form">
           <div class="row">
             <div class="input-field">
-              <input type="text" name="sign-in" id="emailAddress">
+              <input type="text" id="emailAddress">
               <label for="emailAddress">email address</label>
             </div>
           </div>
           <div class="row">
             <div class="input-field">
-              <input type="text" name="sign-in" id="password">
+              <input type="text" id="password">
               <label for="password">password</label>
             </div>
           </div>
           <div class="row">
-            <button type="submit" class="medium-button">sign in</button>
+            <button class="medium-button" id="signInButton">sign in</button>
           </div>
-        </form>
+        </div>
         <p class="form-error"></p>
       </div>
     </section>
@@ -79,35 +79,37 @@
       </p>
       <div class="landing-form">
         <h3>SIGN UP</h3>
-        <form class="" action="" method="post" id="sign-up-form">
+        <div id="sign-up-form">
           <div class="row">
             <div class="input-field">
-              <input type="text" name="sign-in" id="emailAddress">
-              <label for="emailAddress">email address</label>
+              <input type="text" id="emailAddressUp">
+              <label for="emailAddressUp">email address</label>
             </div>
           </div>
           <div class="row">
             <div class="input-field">
-              <input type="text" name="sign-in" id="password">
-              <label for="password">password</label>
+              <input type="text" id="passwordUp">
+              <label for="passwordUp">password</label>
             </div>
           </div>
           <div class="row">
             <div class="input-field">
-              <input type="text" name="sign-in" id="password">
-              <label for="password">confirm password</label>
+              <input type="text" id="confirmPassword">
+              <label for="confirmPassword">confirm password</label>
             </div>
           </div>
           <div class="row">
-            <button type="submit" class="medium-button">sign up</button>
+            <button class="medium-button" id="signUpButton">sign up</button>
           </div>
-        </form>
+        </div>
         <p class="form-error"></p>
       </div>
     </section>
 
   <!-- jQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <!-- Materialize Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
   <!-- local js -->
   <script src="public/js/landing.js" charset="utf-8"></script>
   </body>

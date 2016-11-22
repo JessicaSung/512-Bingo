@@ -90,6 +90,10 @@ input[type=text]:focus:not([read-only]) {
   letter-spacing: 2px;
 }
 
+button:focus {
+  background-color: transparent;
+}
+
 .medium-button {
   font-size: 16px;
   letter-spacing: 2px;
@@ -225,4 +229,10 @@ input[type=text]:focus:not([read-only]) {
     cursor: pointer;
     text-decoration: underline;
   }
+}
+
+.form-error {
+  color: $dark-blue;
+  font-size: 11px;
+  letter-spacing: 2px;
 }

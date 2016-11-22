@@ -42,4 +42,59 @@ $(document).ready(function() {
     $('#landing').css('right', '0').show();
   })
 
+  // --------sign in button-----------------
+  $('#signInButton').on('click', function() {
+    var data = {
+      email: $('#email').val().trim(),
+      password: $('#password').val().trim()
+    }
+    // AJAX call to database
+  })
+
+  // -----sign up validation--------------
+  var error = true;
+
+  $('#emailAddressUp').on('blur', function() {
+    var email = $('#emailAddressUp').val();
+    var atSign = email.search(/@/g);
+    console.log(atSign);
+    if(atSign < 0) {
+      error = true;
+      $('.form-error').html('*Please enter a valid email!').show()
+      setTimeout(function () {
+        $('.form-error').hide()
+      }, 5000);
+    } else {
+      error = false;
+    }
+  })
+
+  $('#confirmPassword').on('blur', function() {
+    var password1 = $('#passwordUp').val();
+    var password2 = $('#confirmPassword').val();
+    console.log(password1, password2);
+
+    if(password1 != password2) {
+      error = true;
+      $('.form-error').html('*Your passwords do not match!').show()
+      setTimeout(function () {
+        $('.form-error').hide()
+      }, 5000);
+    } else {
+      error = false;
+    }
+  })
+
+  $('#signUpButton').on('click', function() {
+    var data = {
+      email: $('#emailUp').val(),
+      password: $('#passwordUp').val()
+    }
+
+    console.log(error);
+    if(error == false) {
+      console.log('no error');
+      // AJAX CALL
+    }
+  })
 })

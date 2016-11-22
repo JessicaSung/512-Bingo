@@ -98,6 +98,9 @@ button:focus {
   text-align: center;
   text-transform: uppercase; }
 
+h3 {
+  text-transform: uppercase; }
+
 #landing {
   position: relative;
   right: 0; }
@@ -131,7 +134,7 @@ button:focus {
   border-color: #e95e6c;
   color: #e95e6c; }
 
-#landing-corner-logo, #signInView, #signUpView {
+#signInView, #signUpView {
   display: none; }
 
 .landing-form {
@@ -183,9 +186,6 @@ button:focus {
   color: #48515f;
   font-size: 11px;
   letter-spacing: 2px; }
-
-#landing-corner-logo {
-  display: block; }
 
 .mobile-menu-icon {
   position: absolute;
@@ -262,11 +262,59 @@ button:focus {
   .menu-box:nth-child(5n) {
     color: #61c5be;
     border-color: #61c5be; }
+  .menu-box div {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); }
 
-.hold-center {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%); }
+#mobile-category {
+  margin-top: 150px; }
+  #mobile-category h3 {
+    margin: 0; }
+  #mobile-category li:nth-child(3n+1) {
+    color: #48515f;
+    border-color: #48515f; }
+  #mobile-category li:nth-child(2n) {
+    color: #61c5be;
+    border-color: #61c5be; }
+  #mobile-category li:nth-child(3n) {
+    color: #f6bd58;
+    border-color: #f6bd58; }
+  #mobile-category li:hover {
+    cursor: pointer; }
+
+.category-box {
+  position: relative;
+  width: 225px;
+  float: left;
+  font-size: 30px;
+  text-transform: uppercase;
+  border-bottom: solid 3px;
+  display: inline-block;
+  margin: 30px 0; }
+  .category-box:nth-child(even) {
+    float: right; }
+  .category-box:nth-child(3n) {
+    color: #f6bd58;
+    border-color: #f6bd58; }
+  .category-box:nth-child(2n) {
+    color: #f6bd58;
+    border-color: #f6bd58; }
+  .category-box:nth-child(3n+1) {
+    color: #48515f;
+    border-color: #48515f; }
+  .category-box:nth-child(4n+1) {
+    color: #61c5be;
+    border-color: #61c5be; }
+  .category-box:hover {
+    cursor: pointer; }
+
+#desk-category {
+  width: 575px;
+  margin: auto;
+  margin-top: 150px; }
+  #desk-category h4 {
+    margin: 0; }
 
 /*# sourceMappingURL=style.css.map */

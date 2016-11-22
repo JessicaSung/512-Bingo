@@ -156,4 +156,14 @@ input[type=text]:focus:not([read-only]) {
   color: #e95e6c;
   border-color: #e95e6c; }
 
+.toggle-sign {
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  color: #f6bd58;
+  font-size: 13px; }
+  .toggle-sign:hover {
+    cursor: pointer;
+    text-decoration: underline; }
+
 /*# sourceMappingURL=style.css.map */

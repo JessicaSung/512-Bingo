@@ -214,3 +214,15 @@ input[type=text]:focus:not([read-only]) {
     border-color: $red;
   }
 }
+
+.toggle-sign {
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  color: $orange;
+  font-size: 13px;
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}

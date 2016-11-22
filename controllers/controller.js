@@ -4,15 +4,15 @@ var model = require('../models/bingo.js');
 
 
 router.get('/', function(req, res) {
-  res.send('index');
+  res.render('index');
 })
 
 router.get('/menu', function(req, res) {
-  res.send('menu');
+  res.render('menu');
 })
 
 router.get('/add', function(req, res) {
-  res.send('add');
+  res.render('add');
 })
 
 

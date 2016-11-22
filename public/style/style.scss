@@ -121,6 +121,10 @@ input[type=text]:focus:not([read-only]) {
 }
 
 // -------landing page----------
+#landing {
+  position: relative;
+  right: 0;
+}
 
 #landing-row {
   width: 320px;
@@ -158,14 +162,16 @@ input[type=text]:focus:not([read-only]) {
   color: $red;
 }
 
-#landing-corner-logo, .landing-form {
+#landing-corner-logo, #signInView, #signUpView {
   display: none;
 }
 
 .landing-form {
+  position: relative;
   width: 275px;
   margin: auto;
   margin-top: 150px;
+  left: 500px;
   h3 {
     margin-bottom: 40px;
     color: $dark-blue;

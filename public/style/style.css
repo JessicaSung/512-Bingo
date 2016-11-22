@@ -1,0 +1,177 @@
+@font-face {
+  font-family: 'Nord Bold';
+  src: url("font/nord-bold-webfont.woff2") format("woff2"), url("font/nord-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+.orange {
+  color: #f6bd58;
+  background-color: transparent !important; }
+
+.dark-blue {
+  color: #48515f; }
+
+.blue {
+  color: #61c5be;
+  background-color: transparent !important; }
+
+.red {
+  color: #e95e6c;
+  background-color: transparent !important; }
+
+body {
+  font-family: 'Nord Bold';
+  background-image: url("images/halftone.png");
+  letter-spacing: 4px; }
+
+.relative {
+  position: relative; }
+
+.center {
+  text-align: center; }
+
+.center-x {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0); }
+
+.round {
+  border-radius: 100%; }
+
+.big-box {
+  border: solid 3px;
+  font-size: 25px;
+  padding: 5px;
+  display: inline-block;
+  text-align: center; }
+  .big-box:hover {
+    cursor: pointer; }
+
+input[type=text] {
+  border-bottom: solid 3px; }
+
+input[type=text]:focus:not([read-only]) {
+  box-shadow: none;
+  border-width: 3px; }
+
+.input-field label {
+  color: #61c5be;
+  letter-spacing: 2px; }
+
+button:focus {
+  background-color: transparent; }
+
+.medium-button {
+  font-size: 16px;
+  letter-spacing: 2px;
+  border: solid 3px;
+  background-color: transparent;
+  padding-top: 6px; }
+
+.corner-circle {
+  background-color: rgba(255, 255, 255, 0.6);
+  position: absolute;
+  top: -47px;
+  left: -38px;
+  width: 150px;
+  height: 150px; }
+
+.corner-text {
+  width: 100px;
+  color: #f6bd58;
+  position: absolute;
+  top: 10px;
+  left: 15px; }
+
+.form-error {
+  color: #48515f;
+  display: none; }
+
+#landing {
+  position: relative;
+  right: 0; }
+
+#landing-row {
+  width: 320px; }
+
+.landing-wrapper {
+  margin-top: 75px; }
+
+.big-circle {
+  background-color: rgba(255, 255, 255, 0.5);
+  height: 260px;
+  width: 260px;
+  z-index: -1; }
+
+.big-logo {
+  width: 275px;
+  top: 110px; }
+
+#signIn, #signUp {
+  width: 150px; }
+
+#signIn {
+  border-color: #61c5be;
+  color: #61c5be;
+  margin-top: 300px;
+  margin-bottom: 5px; }
+
+#signUp {
+  border-color: #e95e6c;
+  color: #e95e6c; }
+
+#landing-corner-logo, #signInView, #signUpView {
+  display: none; }
+
+.landing-form {
+  position: relative;
+  width: 275px;
+  margin: auto;
+  margin-top: 150px;
+  left: 500px; }
+  .landing-form h3 {
+    margin-bottom: 40px;
+    color: #48515f;
+    text-align: center; }
+  .landing-form button {
+    float: right; }
+
+#sign-in-form input[type=text] {
+  border-color: #61c5be;
+  color: #61c5be; }
+  #sign-in-form input[type=text]:focus {
+    color: #61c5be;
+    border-color: #61c5be; }
+#sign-in-form button {
+  color: #61c5be;
+  border-color: #61c5be; }
+
+#sign-up-form input[type=text] {
+  border-color: #e95e6c;
+  color: #e95e6c; }
+  #sign-up-form input[type=text]:focus {
+    color: #e95e6c;
+    border-color: #e95e6c; }
+#sign-up-form label {
+  color: #e95e6c; }
+#sign-up-form button {
+  color: #e95e6c;
+  border-color: #e95e6c; }
+
+.toggle-sign {
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  color: #f6bd58;
+  font-size: 13px; }
+  .toggle-sign:hover {
+    cursor: pointer;
+    text-decoration: underline; }
+
+.form-error {
+  color: #48515f;
+  font-size: 11px;
+  letter-spacing: 2px; }
+
+/*# sourceMappingURL=style.css.map */

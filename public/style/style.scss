@@ -141,6 +141,21 @@ h3 {
   text-transform: uppercase;
 }
 
+.back {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  i {
+    color: $orange;
+    vertical-align: bottom;
+  }
+  p {
+    margin: 0;
+    display: inline;
+    color: $orange;
+  }
+}
+
 // -------landing page----------
 #landing {
   position: relative;
@@ -435,5 +450,26 @@ h3 {
   i {
     font-size: 36px;
     vertical-align: bottom;
+  }
+}
+
+// ------- user badges ---------
+
+#userBadges {
+  margin-top: 120px;
+  text-align: center;
+}
+
+.badge {
+  margin-top: 60px;
+  margin-bottom: 0;
+  img {
+    width: 200px;
+  }
+  h4 {
+    text-transform: uppercase;
+  }
+  &:last-child {
+    margin-bottom: 100px;
   }
 }

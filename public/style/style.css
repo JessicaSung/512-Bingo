@@ -101,6 +101,18 @@ button:focus {
 h3 {
   text-transform: uppercase; }
 
+.back {
+  position: absolute;
+  top: 20px;
+  left: 20px; }
+  .back i {
+    color: #f6bd58;
+    vertical-align: bottom; }
+  .back p {
+    margin: 0;
+    display: inline;
+    color: #f6bd58; }
+
 #landing {
   position: relative;
   right: 0; }
@@ -322,5 +334,19 @@ h3 {
   #desk-category i {
     font-size: 36px;
     vertical-align: bottom; }
+
+#userBadges {
+  margin-top: 120px;
+  text-align: center; }
+
+.badge {
+  margin-top: 60px;
+  margin-bottom: 0; }
+  .badge img {
+    width: 200px; }
+  .badge h4 {
+    text-transform: uppercase; }
+  .badge:last-child {
+    margin-bottom: 100px; }
 
 /*# sourceMappingURL=style.css.map */

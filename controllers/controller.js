@@ -15,6 +15,10 @@ router.get('/menu/:category', function(req, res) {
   res.render('categoryMenu');
 })
 
+router.get('/my-games', function(req, res) {
+  res.render('userGames');
+})
+
 router.get('/add', function(req, res) {
   res.render('add');
 })

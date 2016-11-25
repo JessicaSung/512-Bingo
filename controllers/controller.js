@@ -11,6 +11,18 @@ router.get('/menu', function(req, res) {
   res.render('menu');
 })
 
+router.get('/menu/:category', function(req, res) {
+  res.render('categoryMenu');
+})
+
+router.get('/my-games', function(req, res) {
+  res.render('userGames');
+})
+
+router.get('/badges', function(req, res) {
+  res.render('userBadges');
+})
+
 router.get('/add', function(req, res) {
   res.render('add');
 })

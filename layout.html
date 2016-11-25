@@ -12,84 +12,47 @@
     <title>512-Bingo</title>
   </head>
   <body>
-    <!-- corner logo -->
-    <div id="landing-corner-logo">
-      <div class="round corner-circle"></div>
-      <h5 class="corner-text">512 BINGO</h5>
-    </div>
 
-    <!-- mobile menu -->
-    <section class="hide-on-med-and-up">
-      <!-- mobile additional menu -->
-      <div class="mobile-menu-icon">
-        <i class="small material-icons" id="menu">menu</i>
-        <i class="small material-icons" id="x">close</i>
-      </div>
-      <!-- menu items -->
-      <div class="mobile-main-menu">
-        <ul class="menu-list">
-          <li>my games <i class="material-icons">chevron_right</i></li>
-          <li>places <i class="material-icons">chevron_right</i></li>
-          <li>people <i class="material-icons">chevron_right</i></li>
-          <li>food <i class="material-icons">chevron_right</i></li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- mobile dropdown menu -->
-    <div class="mobile-drop-menu">
-      <ul class="menu-list">
-        <li class="red">add a card <i class="material-icons">chevron_right</i></li>
-        <li class="blue">my badges <i class="material-icons">chevron_right</i></li>
-        <li class="dark-blue">sign out <i class="material-icons">chevron_right</i></li>
-      </ul>
-    </div>
-
-    <!-- tablet+ menu -->
-    <section class="hide-on-small-only">
-      <p class="sign-out">
-        sign out
+    <!-- back arrow -->
+    <div class="back">
+      <i class="material-icons">arrow_back</i><p>
+        back
       </p>
-      <div class="main-menu">
-        <div class="menu-box">
-          <div class="hold-center">
-            <h4>my games</h4>
-          </div>
+    </div>
+
+    <!-- mobile user badges -->
+    <section class="userBadges hide-on-med-and-up">
+      <h3 class="orange">My Badges</h3>
+      <div>
+        <div class="badge" data-badge="1">
+          <img src="public/style/images/food-scout.png" alt="Scout Badge">
+          <h4 class="dark-blue">Food Scout</h4>
+          <h5 class="dark-blue">yum...</h5>
         </div>
-        <div class="menu-box">
-          <div class="hold-center">
-            <h4>my badges</h4>
-          </div>
-        </div>
-        <div class="menu-box">
-          <div class="hold-center">
-            <h4>add a card</h4>
-          </div>
-        </div>
-        <div class="menu-box">
-          <div class="hold-center">
-            <h4>people</h4>
-          </div>
-        </div>
-        <div class="menu-box">
-          <div class="hold-center">
-            <h4>places</h4>
-          </div>
-        </div>
-        <div class="menu-box">
-          <div class="hold-center">
-            <h4>food</h4>
-          </div>
+        <div class="badge" data-badge="2">
+          <img src="public/style/images/food-scout.png" alt="Scout Badge">
+          <h4 class="dark-blue">Food Scout</h4>
+          <h5 class="dark-blue">yum...</h5>
         </div>
       </div>
     </section>
 
+    <!-- tablet+ user badges -->
+    <section class="userBadges hide-on-small-only">
+      <h3 class="orange">My badges</h3>
+      <div class="tablet-badges">
+        <div class="badge">
+          <img src="public/style/images/food-scout.png" alt="Sout Badge">
+          <h4 class="dark-blue">Food Scout</h4>
+          <h5 class="dark-blue">yum...</h5>
+        </div>
+        <div class="badge">
+          <img src="public/style/images/food-scout.png" alt="Sout Badge">
+          <h4 class="dark-blue">Food Scout</h4>
+          <h5 class="dark-blue">yum...</h5>
+        </div>
+      </div>
+    </section>
 
-  <!-- jQuery -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <!-- Materialize Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
-  <!-- local js -->
-  <script src="public/js/menu.js" charset="utf-8"></script>
   </body>
 </html>

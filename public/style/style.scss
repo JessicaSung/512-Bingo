@@ -487,3 +487,43 @@ h3 {
     }
   }
 }
+
+// ------- game board -----------
+
+.game-board {
+  margin-top: 120px;
+  text-align: center;
+  h3 {
+    width: 80%;
+    margin: auto;
+  }
+  .menu-box {
+    margin: 40px auto;
+    float: none;
+    clear: none;
+    display: block;
+    border-width: 5px;
+    border-color: $blue;
+    width: 200px;
+    height: 200px;
+    color: $blue;
+    h4 {
+      font-size: 40px;
+    }
+    &:nth-child(even) {
+      color: $red;
+      border-color: $red;
+    }
+  }
+}
+
+.star {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  img {
+    width: 175px;
+  }
+}

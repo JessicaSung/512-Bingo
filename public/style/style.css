@@ -362,4 +362,34 @@ h3 {
     .tablet-badges .badge:nth-child(even) {
       float: right; }
 
+.game-board {
+  margin-top: 120px;
+  text-align: center; }
+  .game-board h3 {
+    width: 80%;
+    margin: auto; }
+  .game-board .menu-box {
+    margin: 40px auto;
+    float: none;
+    clear: none;
+    display: block;
+    border-width: 5px;
+    border-color: #61c5be;
+    width: 200px;
+    height: 200px;
+    color: #61c5be; }
+    .game-board .menu-box h4 {
+      font-size: 40px; }
+    .game-board .menu-box:nth-child(even) {
+      color: #e95e6c;
+      border-color: #e95e6c; }
+
+.star {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%); }
+  .star img {
+    width: 175px; }
+
 /*# sourceMappingURL=style.css.map */

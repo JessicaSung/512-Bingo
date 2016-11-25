@@ -11,6 +11,10 @@ router.get('/menu', function(req, res) {
   res.render('menu');
 })
 
+router.get('/menu/:category', function(req, res) {
+  res.render('categoryMenu');
+})
+
 router.get('/add', function(req, res) {
   res.render('add');
 })

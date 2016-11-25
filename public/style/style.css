@@ -320,6 +320,7 @@ h3 {
     position: absolute;
     bottom: 0px; }
   #desk-category i {
-    font-size: 36px; }
+    font-size: 36px;
+    vertical-align: bottom; }
 
 /*# sourceMappingURL=style.css.map */

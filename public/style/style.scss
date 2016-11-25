@@ -391,6 +391,7 @@ h3 {
 
 .category-box {
   position: relative;
+  height: 125px;
   width: 225px;
   float: left;
   font-size: 30px;
@@ -428,5 +429,10 @@ h3 {
   margin-top: 150px;
   h4 {
     margin: 0;
+    position: absolute;
+    bottom: 0px;
+  }
+  i {
+    font-size: 36px;
   }
 }

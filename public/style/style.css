@@ -458,6 +458,7 @@ h3 {
     margin-right: 20px; }
 
 .tablet-modal {
+  display: none;
   position: absolute;
   width: 520px;
   height: 530px;

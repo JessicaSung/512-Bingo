@@ -1,7 +1,10 @@
 $(document).ready(function() {
 
+  var currentURL = window.location.origin
   // inital AJAX call to database to get marked boxes
-
+  // if res array.length == 8 {
+    // window.location = currentURL + '/badge'
+// }
 
   // ------box marking-------------------------
   var box;

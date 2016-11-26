@@ -119,7 +119,8 @@ h3 {
   .back p {
     margin: 0;
     display: inline;
-    color: #f6bd58; }
+    color: #f6bd58;
+    letter-spacing: 2px; }
 
 #landing {
   position: relative;
@@ -470,5 +471,22 @@ h3 {
     top: 150px; }
     .tablet-modal .modal-message h4 {
       color: #48515f; }
+
+.newBadge {
+  margin-top: 75px;
+  text-align: center; }
+  .newBadge h3 {
+    margin-bottom: 0; }
+  .newBadge h5 {
+    margin-top: 5px;
+    font-size: 18px;
+    letter-spacing: 2px; }
+
+.congrats {
+  display: inline-block;
+  border-bottom: solid 3px #f6bd58; }
+
+.menu-back i, .menu-back p {
+  color: #e95e6c; }
 
 /*# sourceMappingURL=style.css.map */

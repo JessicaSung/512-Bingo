@@ -164,6 +164,7 @@ h3 {
     margin: 0;
     display: inline;
     color: $orange;
+    letter-spacing: 2px;
   }
 }
 
@@ -627,5 +628,31 @@ h3 {
     h4 {
       color: $dark-blue;
     }
+  }
+}
+
+// --------new badge---------------
+
+.newBadge {
+  margin-top: 75px;
+  text-align: center;
+  h3 {
+    margin-bottom: 0;
+  }
+  h5 {
+    margin-top: 5px;
+    font-size: 18px;
+    letter-spacing: 2px;
+  }
+}
+
+.congrats {
+  display: inline-block;
+  border-bottom: solid 3px $orange;
+}
+
+.menu-back {
+  i, p {
+    color: $red;
   }
 }

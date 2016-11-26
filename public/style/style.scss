@@ -597,7 +597,7 @@ h3 {
   left: 0;
 }
 
-.mobile-modal-message {
+.modal-message {
   width: 300px;
   position: absolute;
   top: 200px;
@@ -610,5 +610,21 @@ h3 {
   }
   .medium-button:nth-child(2) {
     margin-right: 20px;
+  }
+}
+
+.tablet-modal {
+  position: absolute;
+  width: 520px;
+  height: 530px;
+  top: 210px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.9);
+  .modal-message {
+    top: 150px;
+    h4 {
+      color: $dark-blue;
+    }
   }
 }

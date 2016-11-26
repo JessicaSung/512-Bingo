@@ -20,8 +20,10 @@
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
     "express-handlebars": "^3.0.0",
+    "jsonwebtoken": "^7.1.9",
     "method-override": "^2.3.6",
     "mysql": "^2.12.0",
+    "njwt": "^0.3.2",
     "password-hash": "^1.2.2"
   }
 }

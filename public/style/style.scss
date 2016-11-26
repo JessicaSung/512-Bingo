@@ -36,6 +36,17 @@ $red: rgb(233, 94, 108);
   background-color: transparent !important;
 }
 
+.red-box {
+  color: $red;
+  border-color: $red;
+}
+
+.blue-box {
+  color: $blue;
+  border-color: $blue;
+}
+
+
 
 //----element styles---------
 
@@ -153,6 +164,7 @@ h3 {
     margin: 0;
     display: inline;
     color: $orange;
+    letter-spacing: 2px;
   }
 }
 
@@ -485,5 +497,162 @@ h3 {
     &:nth-child(even) {
       float: right;
     }
+  }
+}
+
+// ------- game board -----------
+
+.game-board {
+  margin-top: 120px;
+  text-align: center;
+  h3 {
+    width: 80%;
+    margin: auto;
+  }
+}
+
+.mobile-board {
+  .menu-box {
+    margin: 40px auto;
+    float: none;
+    clear: none;
+    display: block;
+    border-width: 5px;
+    border-color: $blue;
+    width: 200px;
+    height: 200px;
+    color: $blue;
+    h4 {
+      font-size: 40px;
+    }
+    &:nth-child(even) {
+      color: $red;
+      border-color: $red;
+    }
+  }
+}
+
+.tablet-board {
+  width: 500px;
+  margin: auto;
+  margin-top: 50px;
+  .menu-box {
+    &:nth-child(8n+1) {
+      color: $blue;
+      border-color: $blue;
+    }
+    &:nth-child(2n) {
+      color: $dark-blue;
+      border-color: $dark-blue;
+    }
+    &:nth-child(5) {
+      color: $orange;
+      border-color: $orange;
+    }
+    &:nth-child(7) {
+      color: $dark-blue;
+      border-color: $dark-blue;
+    }
+    &:nth-child(4n) {
+      color: $red;
+      border-color: $red;
+    }
+    &:nth-child(3) {
+      color: $red;
+      border-color: $red;
+    }
+  }
+}
+
+.star {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  img {
+    width: 175px;
+  }
+}
+
+.tablet-star {
+  display: none;
+  img {
+    width: 145px;
+    padding-top: 15px;
+  }
+}
+
+.free-star {
+  display: block;
+  z-index: -1;
+}
+
+.mobile-modal {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.9);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.modal-message {
+  width: 300px;
+  position: absolute;
+  top: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  h4 {
+    margin-bottom: 40px;
+    color: $orange;
+  }
+  .medium-button:nth-child(2) {
+    margin-right: 20px;
+  }
+}
+
+.tablet-modal {
+  display: none;
+  position: absolute;
+  width: 520px;
+  height: 530px;
+  top: 210px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.9);
+  .modal-message {
+    top: 150px;
+    h4 {
+      color: $dark-blue;
+    }
+  }
+}
+
+// --------new badge---------------
+
+.newBadge {
+  margin-top: 75px;
+  text-align: center;
+  h3 {
+    margin-bottom: 0;
+  }
+  h5 {
+    margin-top: 5px;
+    font-size: 18px;
+    letter-spacing: 2px;
+  }
+}
+
+.congrats {
+  display: inline-block;
+  border-bottom: solid 3px $orange;
+}
+
+.menu-back {
+  i, p {
+    color: $red;
   }
 }

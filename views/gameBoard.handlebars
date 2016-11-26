@@ -9,7 +9,7 @@
 <section class="game-board hide-on-med-and-up">
   <h3 class="dark-blue">That guy at that place</h3>
   <div class="mobile-board">
-    <div class="menu-box">
+    <div class="menu-box" data-box="1">
       <div>
         <h4>hipster eating a taco</h4>
       </div>
@@ -17,13 +17,22 @@
         <img src="style/images/star.png" alt="star">
       </div>
     </div>
-    <div class="menu-box">
+    <div class="menu-box" data-box="2">
       <div>
         <h4>hipster eating a taco</h4>
       </div>
     </div>
   </div>
 </section>
+
+<!-- Mobile Modal -->
+<div class="mobile-modal hide-on-med-and-up">
+  <div class="mobile-modal-message">
+    <h4>Awesome! <br />You found it?</h4>
+    <button class="medium-button notFound red-box">Oh....no</button>
+    <button class="medium-button found blue-box">You bet</button>
+  </div>
+</div>
 
 <!-- tablet+ game board -->
 <section class="game-board hide-on-small-only">
@@ -103,3 +112,16 @@
     </div>
   </div>
 </section>
+
+<!-- Tablet Modal -->
+<div class="hide-on-small-only">
+
+</div>
+
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<!-- Materialize Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+<!-- local js -->
+<script src="js/game.js" charset="utf-8"></script>

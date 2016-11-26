@@ -36,6 +36,16 @@ $red: rgb(233, 94, 108);
   background-color: transparent !important;
 }
 
+.red-box {
+  color: $red;
+  border-color: $red;
+}
+
+.blue-box {
+  color: $blue;
+  border-color: $blue;
+}
+
 
 
 //----element styles---------
@@ -575,4 +585,30 @@ h3 {
 .free-star {
   display: block;
   z-index: -1;
+}
+
+.mobile-modal {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.9);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.mobile-modal-message {
+  width: 300px;
+  position: absolute;
+  top: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  h4 {
+    margin-bottom: 40px;
+    color: $orange;
+  }
+  .medium-button:nth-child(2) {
+    margin-right: 20px;
+  }
 }

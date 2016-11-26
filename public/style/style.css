@@ -18,6 +18,14 @@
   color: #e95e6c;
   background-color: transparent !important; }
 
+.red-box {
+  color: #e95e6c;
+  border-color: #e95e6c; }
+
+.blue-box {
+  color: #61c5be;
+  border-color: #61c5be; }
+
 body {
   font-family: 'Nord Bold';
   background-image: url("images/halftone.png");
@@ -426,5 +434,26 @@ h3 {
 .free-star {
   display: block;
   z-index: -1; }
+
+.mobile-modal {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.9);
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+.mobile-modal-message {
+  width: 300px;
+  position: absolute;
+  top: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center; }
+  .mobile-modal-message h4 {
+    margin-bottom: 40px;
+    color: #f6bd58; }
+  .mobile-modal-message .medium-button:nth-child(2) {
+    margin-right: 20px; }
 
 /*# sourceMappingURL=style.css.map */

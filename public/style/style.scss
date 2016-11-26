@@ -37,6 +37,7 @@ $red: rgb(233, 94, 108);
 }
 
 
+
 //----element styles---------
 
 body {
@@ -497,6 +498,9 @@ h3 {
     width: 80%;
     margin: auto;
   }
+}
+
+.mobile-board {
   .menu-box {
     margin: 40px auto;
     float: none;
@@ -517,6 +521,38 @@ h3 {
   }
 }
 
+.tablet-board {
+  width: 500px;
+  margin: auto;
+  margin-top: 50px;
+  .menu-box {
+    &:nth-child(8n+1) {
+      color: $blue;
+      border-color: $blue;
+    }
+    &:nth-child(2n) {
+      color: $dark-blue;
+      border-color: $dark-blue;
+    }
+    &:nth-child(5) {
+      color: $orange;
+      border-color: $orange;
+    }
+    &:nth-child(7) {
+      color: $dark-blue;
+      border-color: $dark-blue;
+    }
+    &:nth-child(4n) {
+      color: $red;
+      border-color: $red;
+    }
+    &:nth-child(3) {
+      color: $red;
+      border-color: $red;
+    }
+  }
+}
+
 .star {
   display: none;
   position: absolute;
@@ -526,4 +562,17 @@ h3 {
   img {
     width: 175px;
   }
+}
+
+.tablet-star {
+  display: none;
+  img {
+    width: 145px;
+    padding-top: 15px;
+  }
+}
+
+.free-star {
+  display: block;
+  z-index: -1;
 }

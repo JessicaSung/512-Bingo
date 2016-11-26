@@ -23,6 +23,10 @@ router.get('/badges', function(req, res) {
   res.render('userBadges');
 })
 
+router.get('/play', function(req, res) {
+  res.render('gameBoard');
+})
+
 router.get('/add', function(req, res) {
   res.render('add');
 })

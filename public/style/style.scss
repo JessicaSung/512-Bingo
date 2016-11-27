@@ -690,3 +690,81 @@ h3 {
     text-align: center;
   }
 }
+
+.box-input-wrapper {
+  width: 250px;
+  margin: auto;
+  margin-top: 40px;
+  .box-input {
+    position: relative;
+    width: 110px;
+    float: left;
+    border: solid 3px;
+    padding: 3px;
+    text-align: center;
+    line-height: 28px;
+    i {
+      vertical-align: text-bottom;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .done-arrow {
+      color: $red;
+      position: absolute;
+      top: 22px;
+      left: -12px;
+      font-size: 36px;
+    }
+    &:nth-child(even) {
+      float: right;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .ready {
+    color: $blue;
+    border-color: $blue;
+    i {
+      color: $blue;
+    }
+  }
+  .done {
+    color: $red;
+    border-color: $red;
+    i {
+      color: $red;
+    }
+  }
+}
+
+.box-input-form {
+  padding-top: 20px;
+  input[type=text] {
+    margin-top: 10px;
+    border-bottom: solid 2px $red;
+    color: $red;
+    &:focus {
+      color: $red;
+      border-bottom-color: $red;
+    }
+  }
+  label {
+    color: $red !important;
+    top: auto;
+    bottom: 30px;
+  }
+  .active {
+    display: none;
+  }
+  .done-button {
+    float: right;
+    border: solid 2px $red;
+    color: $red;
+    padding: 3px;
+    letter-spacing: 2px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

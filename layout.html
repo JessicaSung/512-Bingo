@@ -23,18 +23,41 @@
     <!-- add new game card -->
     <section class="add-card">
       <h3 class="red">Add a card</h3>
-      <div class="input-field card-name">
-        <input id="cardName" type="text" class="validate">
-        <label for="cardName">CARD NAME</label>
-      </div>
-      <div class="input-field">
-        <select>
-          <option value="" disabled selected>CARD CATEGORY</option>
-          <option value="1">FOOD</option>
-          <option value="2">PEOPLE</option>
-          <option value="3">PLACES</option>
-        </select>
-      </div>
+      <form>
+        <div class="input-field card-name">
+          <input id="cardName" type="text" class="validate">
+          <label for="cardName">CARD NAME</label>
+        </div>
+        <div class="input-field">
+          <select>
+            <option value="" disabled selected>card category</option>
+            <option value="1">FOOD</option>
+            <option value="2">PEOPLE</option>
+            <option value="3">PLACES</option>
+          </select>
+        </div>
+        <div class="box-input-wrapper">
+          <div class="box-input done" data-box="1">
+            box 1
+            <i class="material-icons">check</i>
+            <i class="material-icons done-arrow">arrow_drop_down</i>
+          </div>
+          <div class="box-input ready" data-box="2">
+            box 2
+            <i class="material-icons">add</i>
+            <i class="material-icons done-arrow">arrow_drop_down</i>
+          </div>
+          <div class="box-input-form">
+            <div class="input-field">
+              <input id="box1" type="text">
+              <label for="box1">what should we find?</label>
+            </div>
+            <div class="done-button">
+              done
+            </div>
+          </div>
+        </div>
+      </form>
     </section>
 
     <!-- jQuery -->

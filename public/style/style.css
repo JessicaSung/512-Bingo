@@ -511,4 +511,65 @@ h3 {
   font-size: 24px;
   text-align: center; }
 
+.box-input-wrapper {
+  width: 250px;
+  margin: auto;
+  margin-top: 40px; }
+  .box-input-wrapper .box-input {
+    position: relative;
+    width: 110px;
+    float: left;
+    border: solid 3px;
+    padding: 3px;
+    text-align: center;
+    line-height: 28px; }
+    .box-input-wrapper .box-input i {
+      vertical-align: text-bottom;
+      font-size: 20px;
+      font-weight: bold; }
+    .box-input-wrapper .box-input .done-arrow {
+      color: #e95e6c;
+      position: absolute;
+      top: 22px;
+      left: -12px;
+      font-size: 36px; }
+    .box-input-wrapper .box-input:nth-child(even) {
+      float: right; }
+    .box-input-wrapper .box-input:hover {
+      cursor: pointer; }
+  .box-input-wrapper .ready {
+    color: #61c5be;
+    border-color: #61c5be; }
+    .box-input-wrapper .ready i {
+      color: #61c5be; }
+  .box-input-wrapper .done {
+    color: #e95e6c;
+    border-color: #e95e6c; }
+    .box-input-wrapper .done i {
+      color: #e95e6c; }
+
+.box-input-form {
+  padding-top: 20px; }
+  .box-input-form input[type=text] {
+    margin-top: 10px;
+    border-bottom: solid 2px #e95e6c;
+    color: #e95e6c; }
+    .box-input-form input[type=text]:focus {
+      color: #e95e6c;
+      border-bottom-color: #e95e6c; }
+  .box-input-form label {
+    color: #e95e6c !important;
+    top: auto;
+    bottom: 30px; }
+  .box-input-form .active {
+    display: none; }
+  .box-input-form .done-button {
+    float: right;
+    border: solid 2px #e95e6c;
+    color: #e95e6c;
+    padding: 3px;
+    letter-spacing: 2px; }
+    .box-input-form .done-button:hover {
+      cursor: pointer; }
+
 /*# sourceMappingURL=style.css.map */

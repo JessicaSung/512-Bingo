@@ -20,104 +20,29 @@
       </p>
     </div>
 
-    <!-- mobile game board -->
-    <section class="game-board hide-on-med-and-up">
-      <h3 class="dark-blue">That guy at that place</h3>
-      <div class="mobile-board">
-        <div class="menu-box">
-          <div>
-            <h4>hipster eating a taco</h4>
-          </div>
-          <div class="star">
-            <img src="public/style/images/star.png" alt="star">
-          </div>
-        </div>
-        <div class="menu-box">
-          <div>
-            <h4>hipster eating a taco</h4>
-          </div>
-        </div>
+    <!-- add new game card -->
+    <section class="add-card">
+      <h3 class="red">Add a card</h3>
+      <div class="input-field card-name">
+        <input id="cardName" type="text" class="validate">
+        <label for="cardName">CARD NAME</label>
+      </div>
+      <div class="input-field">
+        <select>
+          <option value="" disabled selected>CARD CATEGORY</option>
+          <option value="1">FOOD</option>
+          <option value="2">PEOPLE</option>
+          <option value="3">PLACES</option>
+        </select>
       </div>
     </section>
 
-    <!-- tablet+ game board -->
-    <section class="game-board hide-on-small-only">
-      <h3 class="orange">that guy at that place</h3>
-      <div class="tablet-board">
-        <div class="menu-box">
-          <div>
-            <h4>hipster eating a taco</h4>
-          </div>
-          <div class="tablet-star">
-            <img src="public/style/images/star.png" alt="star">
-          </div>
-        </div>
-        <div class="menu-box">
-          <div>
-            <h4>hipster eating a taco</h4>
-          </div>
-          <div class="tablet-star">
-            <img src="public/style/images/star.png" alt="star">
-          </div>
-        </div>
-        <div class="menu-box">
-          <div>
-            <h4>hipster eating a taco</h4>
-          </div>
-          <div class="tablet-star">
-            <img src="public/style/images/star.png" alt="star">
-          </div>
-        </div>
-        <div class="menu-box">
-          <div>
-            <h4>hipster eating a taco</h4>
-          </div>
-          <div class="tablet-star">
-            <img src="public/style/images/star.png" alt="star">
-          </div>
-        </div>
-        <div class="menu-box">
-          <div class="free-space">
-            <h4>512 Bingo</h4>
-          </div>
-          <div class="tablet-star free-star">
-            <img src="public/style/images/star.png" alt="star">
-          </div>
-        </div>
-        <div class="menu-box">
-          <div>
-            <h4>hipster eating a taco</h4>
-          </div>
-          <div class="tablet-star">
-            <img src="public/style/images/star.png" alt="star">
-          </div>
-        </div>
-        <div class="menu-box">
-          <div>
-            <h4>hipster eating a taco</h4>
-          </div>
-          <div class="tablet-star">
-            <img src="public/style/images/star.png" alt="star">
-          </div>
-        </div>
-        <div class="menu-box">
-          <div>
-            <h4>hipster eating a taco</h4>
-          </div>
-          <div class="tablet-star">
-            <img src="public/style/images/star.png" alt="star">
-          </div>
-        </div>
-        <div class="menu-box">
-          <div>
-            <h4>hipster eating a taco</h4>
-          </div>
-          <div class="tablet-star">
-            <img src="public/style/images/star.png" alt="star">
-          </div>
-        </div>
-      </div>
-    </section>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- Materialize Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+    <!-- local js -->
+    <script src="public/js/add.js" charset="utf-8"></script>
 
   </body>
 </html>

@@ -56,9 +56,6 @@ body {
   .big-box:hover {
     cursor: pointer; }
 
-input[type=text] {
-  border-bottom: solid 3px; }
-
 input[type=text]:focus:not([read-only]) {
   box-shadow: none;
   border-width: 3px; }
@@ -488,5 +485,30 @@ h3 {
 
 .menu-back i, .menu-back p {
   color: #e95e6c; }
+
+.add-card h3 {
+  margin-top: 125px;
+  margin-bottom: 50px;
+  text-align: center; }
+.add-card .input-field {
+  width: 250px;
+  margin: auto; }
+  .add-card .input-field span {
+    color: #e95e6c;
+    font-size: 14px; }
+  .add-card .input-field .select-dropdown {
+    color: #e95e6c;
+    border-bottom: solid 2px #e95e6c; }
+
+.card-name input[type=text] {
+  border-bottom: solid 3px #48515f;
+  margin-bottom: 40px; }
+  .card-name input[type=text]:focus {
+    color: #48515f;
+    border-bottom-color: #48515f; }
+.card-name label {
+  color: #48515f !important;
+  font-size: 24px;
+  text-align: center; }
 
 /*# sourceMappingURL=style.css.map */

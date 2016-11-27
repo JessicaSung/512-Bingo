@@ -87,10 +87,6 @@ body {
   }
 }
 
-input[type=text] {
-  border-bottom: solid 3px;
-}
-
 input[type=text]:focus:not([read-only]) {
   box-shadow: none;
   border-width: 3px;
@@ -654,5 +650,43 @@ h3 {
 .menu-back {
   i, p {
     color: $red;
+  }
+}
+
+// ------add new card-----------
+
+.add-card {
+  h3 {
+    margin-top: 125px;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  .input-field {
+    width: 250px;
+    margin: auto;
+    span {
+      color: $red;
+      font-size: 14px;
+    }
+    .select-dropdown {
+      color: $red;
+      border-bottom: solid 2px $red;
+    }
+  }
+}
+
+.card-name {
+  input[type=text] {
+    border-bottom: solid 3px $dark-blue;
+    margin-bottom: 40px;
+    &:focus {
+      color: $dark-blue;
+      border-bottom-color: $dark-blue;
+    }
+  }
+  label {
+    color: $dark-blue !important;
+    font-size: 24px;
+    text-align: center;
   }
 }

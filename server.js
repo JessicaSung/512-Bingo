@@ -46,15 +46,12 @@ app.post('/authenticate', function(){
 var routes = require('./controllers/controller.js');
 app.use('/', routes);
 
+require('./routing/auth-routes.js')(app); 
+
 // set up local host
 var PORT = process.env.PORT || 3000;
 app.listen(PORT, function() {
   console.log('listening on port: '+PORT);
 });
 
-var claim ={
-			userId:1
-		};
 
-var jwtVar = nJwt.create(claim, app.get('jwtSecret'));
-console.log(jwtVar);

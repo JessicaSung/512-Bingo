@@ -25,6 +25,8 @@
     "method-override": "^2.3.6",
     "mysql": "^2.12.0",
     "njwt": "^0.3.2",
-    "password-hash": "^1.2.2"
+    "password-hash": "^1.2.2",
+    "sequelize": "^3.27.0",
+    "sequelize-cli": "^2.4.0"
   }
 }

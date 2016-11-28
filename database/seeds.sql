@@ -8,4 +8,4 @@ INSERT INTO gamecard (card_name, item, category) VALUES ('Landmark', '[The Capit
 
 INSERT INTO gamecard (card_name, item, category) VALUES ('Activity', '[Someone paddle boarding, Sixth Street, Congress Ave Bridge At Dusk, Hamilton Pool, Austin Panic Room, Peter Pan Mini-Golf, Someone taking a selfie on Mount Bonnell, Blue Cat Cafe]', 'Activity');
 
-INSERT INTO gamecard (user_name, password, active_card, items_found, badge_level) VALUES ('Bob', 'Smith', 'Food', '[3, 5, 7]', '1');
+INSERT INTO user (user_name, password, active_card, items_found, badge_level) VALUES ('Bob', 'Smith', 'Food', '[3, 5, 7]', '1');

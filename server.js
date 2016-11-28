@@ -1,9 +1,16 @@
+// DEPENDENCIES
+// ==============================================
 var express = require('express');
+var mysql = require('mysql');
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
 var jwt  = require('jsonwebtoken'); // JSON Web Token Package for authentication
 var nJwt = require('njwt');
+var models = require('./models');
 
+
+// SETUP EXPRESS SERVER
+// ==============================================
 var app = express();
 
 // express app settings
@@ -42,16 +49,22 @@ app.post('/authenticate', function(){
 		this.throw(401,"wrong user id or password");
 	}	*/	
 })
+
 // import routes
 var routes = require('./controllers/controller.js');
 app.use('/', routes);
 
 require('./routing/auth-routes.js')(app); 
 
-// set up local host
+
+models.sequelize.sync();
+
+
+// DEFINE PORT AND START SERVER LISTEN
+// ==============================================
 var PORT = process.env.PORT || 3000;
 app.listen(PORT, function() {
-  console.log('listening on port: '+PORT);
+  console.log('listening on port: ' + PORT);
 });
 
 

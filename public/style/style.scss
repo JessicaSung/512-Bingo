@@ -87,10 +87,6 @@ body {
   }
 }
 
-input[type=text] {
-  border-bottom: solid 3px;
-}
-
 input[type=text]:focus:not([read-only]) {
   box-shadow: none;
   border-width: 3px;
@@ -654,5 +650,145 @@ h3 {
 .menu-back {
   i, p {
     color: $red;
+  }
+}
+
+// ------add new card-----------
+
+.add-card {
+  h3 {
+    margin-top: 125px;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  .input-field {
+    width: 250px;
+    margin: auto;
+    span {
+      color: $red;
+      font-size: 14px;
+    }
+    .select-dropdown {
+      color: $red;
+      border-bottom: solid 2px $red;
+    }
+  }
+  .error-wrapper {
+    width: 250px;
+    height: 50px;
+    margin: auto;
+    p {
+      float: left;
+      width: 100px;
+      padding-top: 10px;
+    }
+  }
+}
+
+.card-name {
+  input[type=text] {
+    border-bottom: solid 3px $dark-blue;
+    margin-bottom: 40px;
+    &:focus {
+      color: $dark-blue;
+      border-bottom-color: $dark-blue;
+    }
+  }
+  label {
+    color: $dark-blue !important;
+    font-size: 24px;
+    text-align: center;
+  }
+}
+
+.box-input-wrapper {
+  width: 250px;
+  margin: auto;
+  margin-top: 40px;
+  .box-input {
+    margin-bottom: 20px;
+    position: relative;
+    width: 110px;
+    float: left;
+    border: solid 3px;
+    padding: 3px;
+    text-align: center;
+    line-height: 28px;
+    i {
+      vertical-align: text-bottom;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .edit-arrow {
+      display: none;
+      color: $red;
+      position: absolute;
+      top: 22px;
+      left: -12px;
+      font-size: 36px;
+    }
+    &:nth-child(even) {
+      float: right;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .ready {
+    color: $blue;
+    border-color: $blue;
+    i {
+      color: $blue;
+    }
+  }
+  .done, .edit {
+    color: $red;
+    border-color: $red;
+    i {
+      color: $red;
+    }
+  }
+}
+
+.box-input-form {
+  display: none;
+  margin-bottom: 50px;
+  input[type=text] {
+    border-bottom: solid 2px $red;
+    color: $red;
+    &:focus {
+      color: $red;
+      border-bottom-color: $red;
+    }
+  }
+  label {
+    color: $red !important;
+    top: auto;
+    bottom: 30px;
+  }
+  .active {
+    display: none;
+  }
+  .done-button {
+    float: right;
+    border: solid 2px $red;
+    color: $red;
+    padding: 3px;
+    letter-spacing: 2px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.button-wrapper {
+  width: 250px;
+  margin: auto;
+  button {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    float: right;
+    color: $orange;
+    border-color: $orange;
   }
 }

@@ -752,9 +752,8 @@ h3 {
 
 .box-input-form {
   display: none;
-  padding-top: 20px;
+  margin-bottom: 50px;
   input[type=text] {
-    margin-top: 10px;
     border-bottom: solid 2px $red;
     color: $red;
     &:focus {

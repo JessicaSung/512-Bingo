@@ -560,9 +560,8 @@ h3 {
 
 .box-input-form {
   display: none;
-  padding-top: 20px; }
+  margin-bottom: 50px; }
   .box-input-form input[type=text] {
-    margin-top: 10px;
     border-bottom: solid 2px #e95e6c;
     color: #e95e6c; }
     .box-input-form input[type=text]:focus {

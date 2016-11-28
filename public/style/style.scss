@@ -673,6 +673,16 @@ h3 {
       border-bottom: solid 2px $red;
     }
   }
+  .error-wrapper {
+    width: 250px;
+    height: 50px;
+    margin: auto;
+    p {
+      float: left;
+      width: 100px;
+      padding-top: 10px;
+    }
+  }
 }
 
 .card-name {
@@ -696,6 +706,7 @@ h3 {
   margin: auto;
   margin-top: 40px;
   .box-input {
+    margin-bottom: 20px;
     position: relative;
     width: 110px;
     float: left;
@@ -708,7 +719,8 @@ h3 {
       font-size: 20px;
       font-weight: bold;
     }
-    .done-arrow {
+    .edit-arrow {
+      display: none;
       color: $red;
       position: absolute;
       top: 22px;
@@ -729,7 +741,7 @@ h3 {
       color: $blue;
     }
   }
-  .done {
+  .done, .edit {
     color: $red;
     border-color: $red;
     i {
@@ -739,6 +751,7 @@ h3 {
 }
 
 .box-input-form {
+  display: none;
   padding-top: 20px;
   input[type=text] {
     margin-top: 10px;
@@ -766,5 +779,17 @@ h3 {
     &:hover {
       cursor: pointer;
     }
+  }
+}
+
+.button-wrapper {
+  width: 250px;
+  margin: auto;
+  button {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    float: right;
+    color: $orange;
+    border-color: $orange;
   }
 }

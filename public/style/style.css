@@ -499,6 +499,14 @@ h3 {
   .add-card .input-field .select-dropdown {
     color: #e95e6c;
     border-bottom: solid 2px #e95e6c; }
+.add-card .error-wrapper {
+  width: 250px;
+  height: 50px;
+  margin: auto; }
+  .add-card .error-wrapper p {
+    float: left;
+    width: 100px;
+    padding-top: 10px; }
 
 .card-name input[type=text] {
   border-bottom: solid 3px #48515f;
@@ -516,6 +524,7 @@ h3 {
   margin: auto;
   margin-top: 40px; }
   .box-input-wrapper .box-input {
+    margin-bottom: 20px;
     position: relative;
     width: 110px;
     float: left;
@@ -527,7 +536,8 @@ h3 {
       vertical-align: text-bottom;
       font-size: 20px;
       font-weight: bold; }
-    .box-input-wrapper .box-input .done-arrow {
+    .box-input-wrapper .box-input .edit-arrow {
+      display: none;
       color: #e95e6c;
       position: absolute;
       top: 22px;
@@ -542,13 +552,14 @@ h3 {
     border-color: #61c5be; }
     .box-input-wrapper .ready i {
       color: #61c5be; }
-  .box-input-wrapper .done {
+  .box-input-wrapper .done, .box-input-wrapper .edit {
     color: #e95e6c;
     border-color: #e95e6c; }
-    .box-input-wrapper .done i {
+    .box-input-wrapper .done i, .box-input-wrapper .edit i {
       color: #e95e6c; }
 
 .box-input-form {
+  display: none;
   padding-top: 20px; }
   .box-input-form input[type=text] {
     margin-top: 10px;
@@ -571,5 +582,15 @@ h3 {
     letter-spacing: 2px; }
     .box-input-form .done-button:hover {
       cursor: pointer; }
+
+.button-wrapper {
+  width: 250px;
+  margin: auto; }
+  .button-wrapper button {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    float: right;
+    color: #f6bd58;
+    border-color: #f6bd58; }
 
 /*# sourceMappingURL=style.css.map */

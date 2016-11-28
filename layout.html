@@ -24,40 +24,165 @@
     <section class="add-card">
       <h3 class="red">Add a card</h3>
       <form>
+        <!-- card name input -->
         <div class="input-field card-name">
-          <input id="cardName" type="text" class="validate">
+          <input id="cardName" type="text" name="add-card">
           <label for="cardName">CARD NAME</label>
         </div>
+        <!-- category select -->
         <div class="input-field">
-          <select>
+          <select name="add-card">
             <option value="" disabled selected>card category</option>
             <option value="1">FOOD</option>
             <option value="2">PEOPLE</option>
             <option value="3">PLACES</option>
           </select>
         </div>
+        <!-- Add boxes row 1 -->
         <div class="box-input-wrapper">
-          <div class="box-input done" data-box="1">
+          <div class="box-input ready" data-box="box1">
             box 1
-            <i class="material-icons">check</i>
-            <i class="material-icons done-arrow">arrow_drop_down</i>
+            <i class="material-icons">add</i>
+            <i class="material-icons edit-arrow">arrow_drop_down</i>
           </div>
-          <div class="box-input ready" data-box="2">
+          <div class="box-input ready" data-box="box2">
             box 2
             <i class="material-icons">add</i>
-            <i class="material-icons done-arrow">arrow_drop_down</i>
+            <i class="material-icons edit-arrow">arrow_drop_down</i>
           </div>
+          <!-- left box input -->
           <div class="box-input-form">
             <div class="input-field">
-              <input id="box1" type="text">
+              <input id="box1" type="text" name="add-card">
               <label for="box1">what should we find?</label>
             </div>
             <div class="done-button">
               done
             </div>
           </div>
+          <!-- right box input -->
+          <div class="box-input-form">
+            <div class="input-field">
+              <input id="box2" type="text" name="add-card">
+              <label for="box2">what should we find?</label>
+            </div>
+            <div class="done-button">
+              done
+            </div>
+          </div>
+        </div>
+
+        <!-- Add boxes row 2 -->
+        <div class="box-input-wrapper">
+          <div class="box-input ready" data-box="box3">
+            box 3
+            <i class="material-icons">add</i>
+            <i class="material-icons edit-arrow">arrow_drop_down</i>
+          </div>
+          <div class="box-input ready" data-box="box4">
+            box 4
+            <i class="material-icons">add</i>
+            <i class="material-icons edit-arrow">arrow_drop_down</i>
+          </div>
+          <!-- left box input -->
+          <div class="box-input-form">
+            <div class="input-field">
+              <input id="box3" type="text" name="add-card">
+              <label for="box3">what should we find?</label>
+            </div>
+            <div class="done-button">
+              done
+            </div>
+          </div>
+          <!-- right box input -->
+          <div class="box-input-form">
+            <div class="input-field">
+              <input id="box4" type="text" name="add-card">
+              <label for="box4">what should we find?</label>
+            </div>
+            <div class="done-button">
+              done
+            </div>
+          </div>
+        </div>
+
+        <!-- Add boxes row 3 -->
+        <div class="box-input-wrapper">
+          <div class="box-input ready" data-box="box5">
+            box 5
+            <i class="material-icons">add</i>
+            <i class="material-icons edit-arrow">arrow_drop_down</i>
+          </div>
+          <div class="box-input ready" data-box="box6">
+            box 6
+            <i class="material-icons">add</i>
+            <i class="material-icons edit-arrow">arrow_drop_down</i>
+          </div>
+          <!-- left box input -->
+          <div class="box-input-form">
+            <div class="input-field">
+              <input id="box5" type="text" name="add-card">
+              <label for="box5">what should we find?</label>
+            </div>
+            <div class="done-button">
+              done
+            </div>
+          </div>
+          <!-- right box input -->
+          <div class="box-input-form">
+            <div class="input-field">
+              <input id="box6" type="text" name="add-card">
+              <label for="box6">what should we find?</label>
+            </div>
+            <div class="done-button">
+              done
+            </div>
+          </div>
+        </div>
+
+        <!-- Add boxes row 4 -->
+        <div class="box-input-wrapper">
+          <div class="box-input ready" data-box="box7">
+            box 7
+            <i class="material-icons">add</i>
+            <i class="material-icons edit-arrow">arrow_drop_down</i>
+          </div>
+          <div class="box-input ready" data-box="box8">
+            box 8
+            <i class="material-icons">add</i>
+            <i class="material-icons edit-arrow">arrow_drop_down</i>
+          </div>
+          <!-- left box input -->
+          <div class="box-input-form">
+            <div class="input-field">
+              <input id="box7" type="text" name="add-card">
+              <label for="box7">what should we find?</label>
+            </div>
+            <div class="done-button">
+              done
+            </div>
+          </div>
+          <!-- right box input -->
+          <div class="box-input-form">
+            <div class="input-field">
+              <input id="box8" type="text" name="add-card">
+              <label for="box8">what should we find?</label>
+            </div>
+            <div class="done-button">
+              done
+            </div>
+          </div>
+        </div>
+        <!-- submit button -->
+        <div class="button-wrapper">
+          <button class="medium-button">
+            submit
+          </button>
         </div>
       </form>
+      <div class="error-wrapper">
+        <p class="form-error">*error</p>
+      </div>
     </section>
 
     <!-- jQuery -->

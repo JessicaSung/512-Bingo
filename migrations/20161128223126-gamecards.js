@@ -17,14 +17,14 @@ module.exports = {
           category: "Weird"
         },
         {
-          card_name: "Landmark",
+          card_name: "Places",
           item: "[The Capital, Graffiti on Castle Hill, Stevie Ray Vaughan Statue, Zilker Park, I Love You So Much mural, Hi How Are You mural, Barton Springs Pool, UT Tower]",
-          category: "Landmark"
+          category: "Places"
         },
         {
-          card_name: "Activity",
+          card_name: "Do Things",
           item: "[Someone paddle boarding, Sixth Street, Congress Ave Bridge At Dusk, Hamilton Pool, Austin Panic Room, Peter Pan Mini-Golf, Someone taking a selfie on Mount Bonnell, Blue Cat Cafe]",
-          category: "Activity"
+          category: "Do Things"
         },
       ]
     )
@@ -36,8 +36,8 @@ module.exports = {
         {card_name: [
         "Food",
         "Weird",
-        "Landmark",
-        "Activity"
+        "Places",
+        "Do Things"
         ]},
       }
     )

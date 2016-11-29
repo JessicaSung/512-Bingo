@@ -21,6 +21,12 @@ app.use(bodyParser.urlencoded({
 }))
 app.use(methodOverride('_method'));
 
+// Sets up the Express app to handle data parsing
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.text());
+app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
+
 // setting up view engine (handlebars)
 var exphbs = require('express-handlebars');
 app.engine('handlebars', exphbs({
@@ -39,7 +45,7 @@ app.post('/authenticate', function(){
 		};
 
 		var jwtVar = jwt.create(claim, app.get('jwtSecret'));
-		console.log(jwtVar);	
+		console.log(jwtVar);
 })
 
 */
@@ -48,7 +54,7 @@ app.post('/authenticate', function(){
 var routes = require('./controllers/controller.js');
 app.use('/', routes);
 
-require('./routing/auth-routes.js')(app); 
+require('./routing/auth-routes.js')(app);
 
 
 models.sequelize.sync();
@@ -60,5 +66,3 @@ var PORT = process.env.PORT || 3000;
 app.listen(PORT, function() {
   console.log('listening on port: ' + PORT);
 });
-
-

@@ -3,6 +3,7 @@ var router = express.Router();
 var models = require('../models');
 var passwordHash = require('password-hash');
 
+
 models.sequelize.sync();
 
 var currentUser;
@@ -70,7 +71,21 @@ router.get('/menu', function(req, res) {
 })
 
 router.get('/menu/:category', function(req, res) {
-  res.render('categoryMenu');
+  var category = req.params.category.replace(/-/g, ' ');
+
+  models.Gamecards.findAll({
+    attributes: ['card_name'],
+    where: {
+      category: category
+    }
+  }).then(function(result) {
+    var data = {
+      category: category,
+      card: result
+    }
+
+    res.render('categoryMenu', data);
+  })
 })
 
 router.get('/my-games', function(req, res) {

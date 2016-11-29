@@ -45,8 +45,8 @@ $(document).ready(function() {
   // --------sign in button-----------------
   $('#signInButton').on('click', function() {
     var data = {
-      email: $('#email').val().trim(),
-      password: $('#password').val().trim()
+      email: $('#email').val(),
+      password: $('#password').val()
     }
     // AJAX call to database
   })

@@ -8,18 +8,22 @@ module.exports = function(app){
 
 	app.post('/auth', function(req, res){
 		console.log("inside app.post");
-		var email = $('#email').val().trim();
-    	var password = $('#password').val().trim();
+		var email = req.body.email;
+    	var password = req.body.password;
+        console.log("email: " + email + " password: " + password);
     	//verify password and if it is correct get json web token
     	var token = jwt.sign(admin, app.get('jwtSecret'), {
             expiresIn: 1440 // Token is given but will expire in 24 minutes (requiring a re-login)
         });
+        console.log("token: " + token);
         new Cookies(req, res).set('access_token', token, {
             httpOnly: true,
             secure: false
         });
 
             // for debug purposes
+            
+            
             console.log("Cookie Sent");
     	/*
 		var claim ={

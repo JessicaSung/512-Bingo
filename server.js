@@ -41,11 +41,9 @@ app.post('/authenticate', function(){
 		var jwtVar = jwt.create(claim, app.get('jwtSecret'));
 		console.log(jwtVar);	
 })
-<<<<<<< HEAD
-*/
-=======
 
->>>>>>> master
+*/
+
 // import routes
 var routes = require('./controllers/controller.js');
 app.use('/', routes);

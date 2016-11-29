@@ -116,7 +116,7 @@ router.get('/my-badges', function(req, res) {
   res.render('userBadges');
 })
 
-router.get('/play', function(req, res) {
+router.get('/play/:cardName', function(req, res) {
   res.render('gameBoard');
 })
 

@@ -462,10 +462,13 @@ h3 {
     margin: 0;
     position: absolute;
     bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
   }
   i {
     font-size: 36px;
     vertical-align: bottom;
+    display: inline;
   }
 }
 

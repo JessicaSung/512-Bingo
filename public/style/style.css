@@ -343,10 +343,13 @@ h3 {
   #desk-category h4 {
     margin: 0;
     position: absolute;
-    bottom: 0px; }
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%); }
   #desk-category i {
     font-size: 36px;
-    vertical-align: bottom; }
+    vertical-align: bottom;
+    display: inline; }
 
 .userBadges {
   margin-top: 120px;

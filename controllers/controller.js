@@ -18,6 +18,11 @@ router.post('/', function(req, res) {
       user_name: userName,
     }
   }).then(function(result) {
+    if(result.length == 0) {
+      res.send(false);
+      return false;
+    }
+
     var resultPassword = result[0].dataValues.password;
     var verifyPassword = passwordHash.verify(data.password, resultPassword);
     console.log(verifyPassword);

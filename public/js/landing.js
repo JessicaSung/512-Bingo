@@ -56,6 +56,12 @@ $(document).ready(function() {
       console.log(response);
       if(response) {
         window.location = currentURL + '/menu';
+      } else {
+        $('#sign-in-error').html("*We can't find you! Please check your email and password.").show();
+        setTimeout(function() {
+          $('#sign-in-error').hide();
+        }, 5000);
+
       }
     })
   })

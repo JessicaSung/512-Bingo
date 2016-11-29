@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var model = require('../models/bingo.js');
+var models = require('../models');
 
 
 router.get('/', function(req, res) {

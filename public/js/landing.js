@@ -44,11 +44,16 @@ $(document).ready(function() {
 
   // --------sign in button-----------------
   $('#signInButton').on('click', function() {
-    var data = {
-      email: $('#email').val(),
-      password: $('#password').val()
-    }
+    // var data = {
+    //   email: $('#emailAddress').val(),
+    //   password: $('#password').val()
+    // }
+
+    console.log(data);
     // AJAX call to database
+    // $.post('/', data).then(function(response) {
+    //   console.log(response);
+    // })
   })
 
   // -----sign up validation--------------
@@ -97,6 +102,6 @@ $(document).ready(function() {
       // AJAX CALL
     }
   })
- 
+
 
 })

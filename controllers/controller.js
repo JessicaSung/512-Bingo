@@ -1,10 +1,17 @@
 var express = require('express');
 var router = express.Router();
 var models = require('../models');
+var passwordHash = require('password-hash');
 
 
 router.get('/', function(req, res) {
   res.render('index');
+})
+
+router.post('/', function(req, res) {
+  var userPassword = passwordHash.generate(req.body.signIn[1]);
+  console.log(userPassword);
+  res.send(true);
 })
 
 router.get('/menu', function(req, res) {

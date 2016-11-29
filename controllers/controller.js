@@ -3,15 +3,30 @@ var router = express.Router();
 var models = require('../models');
 var passwordHash = require('password-hash');
 
+models.sequelize.sync();
 
 router.get('/', function(req, res) {
   res.render('index');
 })
 
 router.post('/', function(req, res) {
-  var userPassword = passwordHash.generate(req.body.signIn[1]);
-  console.log(userPassword);
-  res.send(true);
+  var data = req.body;
+  var userName = data.email;
+  models.Users.findAll({
+    attributes: ['password'],
+    where: {
+      user_name: userName,
+    }
+  }).then(function(result) {
+    var resultPassword = result[0].dataValues.password;
+    var verifyPassword = passwordHash.verify(data.password, resultPassword);
+    console.log(verifyPassword);
+    if(verifyPassword) {
+      res.send(true);
+    } else {
+      res.send(false);
+    }
+  })
 })
 
 router.get('/menu', function(req, res) {

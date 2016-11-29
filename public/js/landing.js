@@ -43,17 +43,21 @@ $(document).ready(function() {
   })
 
   // --------sign in button-----------------
-  $('#signInButton').on('click', function() {
-    // var data = {
-    //   email: $('#emailAddress').val(),
-    //   password: $('#password').val()
-    // }
+  var currentURL = window.location.origin;
 
-    console.log(data);
+  $('#signInButton').on('click', function() {
+    var data = {
+      email: $('#emailAddress').val(),
+      password: $('#password').val()
+    }
+
     // AJAX call to database
-    // $.post('/', data).then(function(response) {
-    //   console.log(response);
-    // })
+    $.post('/', data).then(function(response) {
+      console.log(response);
+      if(response) {
+        window.location = currentURL + '/menu';
+      }
+    })
   })
 
   // -----sign up validation--------------

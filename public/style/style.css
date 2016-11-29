@@ -26,6 +26,14 @@
   color: #61c5be;
   border-color: #61c5be; }
 
+.orange-box {
+  color: #f6bd58;
+  border-color: #f6bd58; }
+
+.dark-blue-box {
+  color: #48515f;
+  border-color: #48515f; }
+
 body {
   font-family: 'Nord Bold';
   background-image: url("images/halftone.png");
@@ -214,18 +222,6 @@ h3 {
 
 .mobile-main-menu {
   margin-top: 150px; }
-  .mobile-main-menu .menu-list li:nth-child(4n+1) {
-    color: #f6bd58;
-    border-bottom-color: #f6bd58; }
-  .mobile-main-menu .menu-list li:nth-child(2n) {
-    color: #e95e6c;
-    border-bottom-color: #e95e6c; }
-  .mobile-main-menu .menu-list li:nth-child(3n) {
-    color: #61c5be;
-    border-bottom-color: #61c5be; }
-  .mobile-main-menu .menu-list li:nth-child(4n) {
-    color: #48515f;
-    border-bottom-color: #48515f; }
 
 .mobile-drop-menu {
   display: none;
@@ -261,30 +257,41 @@ h3 {
   clear: both;
   margin-bottom: 30px; }
   .menu-box:nth-child(2n) {
-    color: #48515f;
     border-color: #48515f; }
+    .menu-box:nth-child(2n) a {
+      color: #48515f; }
   .menu-box:nth-child(3n+1) {
     float: left;
     clear: none; }
   .menu-box:nth-child(3n) {
     float: right;
     clear: none;
-    color: #e95e6c;
     border-color: #e95e6c; }
+    .menu-box:nth-child(3n) a {
+      color: #e95e6c; }
   .menu-box:nth-child(5n+1) {
-    border-color: #f6bd58;
-    color: #f6bd58; }
+    border-color: #f6bd58; }
+    .menu-box:nth-child(5n+1) a {
+      color: #f6bd58; }
   .menu-box:nth-child(4n) {
-    color: #e95e6c;
     border-color: #e95e6c; }
+    .menu-box:nth-child(4n) a {
+      color: #e95e6c; }
   .menu-box:nth-child(5n) {
-    color: #61c5be;
     border-color: #61c5be; }
+    .menu-box:nth-child(5n) a {
+      color: #61c5be; }
+  .menu-box:nth-child(7n) {
+    border-color: #48515f; }
+    .menu-box:nth-child(7n) a {
+      color: #48515f; }
   .menu-box div {
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%); }
+  .menu-box h4 {
+    width: 125px; }
 
 #mobile-category {
   margin-top: 120px; }
@@ -336,10 +343,13 @@ h3 {
   #desk-category h4 {
     margin: 0;
     position: absolute;
-    bottom: 0px; }
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%); }
   #desk-category i {
     font-size: 36px;
-    vertical-align: bottom; }
+    vertical-align: bottom;
+    display: inline; }
 
 .userBadges {
   margin-top: 120px;

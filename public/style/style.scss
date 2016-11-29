@@ -46,6 +46,16 @@ $red: rgb(233, 94, 108);
   border-color: $blue;
 }
 
+.orange-box {
+  color: $orange;
+  border-color: $orange;
+}
+
+.dark-blue-box {
+  color: $dark-blue;
+  border-color: $dark-blue;
+}
+
 
 
 //----element styles---------
@@ -291,24 +301,6 @@ h3 {
 
 .mobile-main-menu {
   margin-top: 150px;
-  .menu-list li {
-    &:nth-child(4n+1) {
-      color: $orange;
-      border-bottom-color: $orange;
-    }
-    &:nth-child(2n) {
-      color: $red;
-      border-bottom-color: $red;
-    }
-    &:nth-child(3n) {
-      color: $blue;
-      border-bottom-color: $blue;
-    }
-    &:nth-child(4n) {
-      color: $dark-blue;
-      border-bottom-color: $dark-blue;
-    }
-  }
 }
 
 .mobile-drop-menu {
@@ -349,8 +341,10 @@ h3 {
   clear: both;
   margin-bottom: 30px;
   &:nth-child(2n) {
-    color: $dark-blue;
     border-color: $dark-blue;
+    a {
+      color: $dark-blue;
+    }
   }
   &:nth-child(3n+1) {
     float: left;
@@ -359,26 +353,43 @@ h3 {
   &:nth-child(3n) {
     float: right;
     clear: none;
-    color: $red;
     border-color: $red;
+    a {
+      color: $red;
+    }
   }
   &:nth-child(5n+1) {
     border-color: $orange;
-    color: $orange;
+    a {
+      color: $orange;
+    }
   }
   &:nth-child(4n) {
-    color: $red;
     border-color: $red;
+    a {
+      color: $red;
+    }
   }
   &:nth-child(5n) {
-    color: $blue;
     border-color: $blue;
+    a {
+      color: $blue;
+    }
+  }
+  &:nth-child(7n) {
+    border-color: $dark-blue;
+    a {
+      color: $dark-blue;
+    }
   }
   div {
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+  }
+  h4 {
+    width: 125px;
   }
 }
 
@@ -451,10 +462,13 @@ h3 {
     margin: 0;
     position: absolute;
     bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
   }
   i {
     font-size: 36px;
     vertical-align: bottom;
+    display: inline;
   }
 }
 

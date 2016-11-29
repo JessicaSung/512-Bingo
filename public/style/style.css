@@ -290,8 +290,6 @@ h3 {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%); }
-  .menu-box h4 {
-    width: 125px; }
 
 #mobile-category {
   margin-top: 120px; }
@@ -300,12 +298,18 @@ h3 {
   #mobile-category li:nth-child(3n+1) {
     color: #48515f;
     border-color: #48515f; }
+    #mobile-category li:nth-child(3n+1) a {
+      color: #48515f; }
   #mobile-category li:nth-child(2n) {
     color: #61c5be;
     border-color: #61c5be; }
+    #mobile-category li:nth-child(2n) a {
+      color: #61c5be; }
   #mobile-category li:nth-child(3n) {
     color: #f6bd58;
     border-color: #f6bd58; }
+    #mobile-category li:nth-child(3n) a {
+      color: #f6bd58; }
   #mobile-category li:hover {
     cursor: pointer; }
 
@@ -324,15 +328,23 @@ h3 {
   .category-box:nth-child(3n) {
     color: #f6bd58;
     border-color: #f6bd58; }
+    .category-box:nth-child(3n) a {
+      color: #f6bd58; }
   .category-box:nth-child(2n) {
     color: #f6bd58;
     border-color: #f6bd58; }
+    .category-box:nth-child(2n) a {
+      color: #f6bd58; }
   .category-box:nth-child(3n+1) {
     color: #48515f;
     border-color: #48515f; }
+    .category-box:nth-child(3n+1) a {
+      color: #48515f; }
   .category-box:nth-child(4n+1) {
     color: #61c5be;
     border-color: #61c5be; }
+    .category-box:nth-child(4n+1) a {
+      color: #61c5be; }
   .category-box:hover {
     cursor: pointer; }
 

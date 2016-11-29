@@ -388,9 +388,6 @@ h3 {
     top: 50%;
     transform: translate(-50%, -50%);
   }
-  h4 {
-    width: 125px;
-  }
 }
 
 
@@ -405,14 +402,23 @@ h3 {
     &:nth-child(3n+1) {
       color: $dark-blue;
       border-color: $dark-blue;
+      a {
+        color: $dark-blue;
+      }
     }
     &:nth-child(2n) {
       color: $blue;
       border-color: $blue;
+      a {
+        color: $blue;
+      }
     }
     &:nth-child(3n) {
       color: $orange;
       border-color: $orange;
+      a {
+        color: $orange;
+      }
     }
     &:hover {
       cursor: pointer;
@@ -436,18 +442,30 @@ h3 {
   &:nth-child(3n) {
     color: $orange;
     border-color: $orange;
+    a {
+      color: $orange;
+    }
   }
   &:nth-child(2n) {
     color: $orange;
     border-color: $orange;
+    a {
+      color: $orange;
+    }
   }
   &:nth-child(3n+1) {
     color: $dark-blue;
     border-color: $dark-blue;
+    a {
+      color: $dark-blue;
+    }
   }
   &:nth-child(4n+1) {
     color: $blue;
     border-color: $blue;
+    a {
+      color: $blue;
+    }
   }
   &:hover {
     cursor: pointer;

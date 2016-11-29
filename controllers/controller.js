@@ -117,6 +117,18 @@ router.get('/my-badges', function(req, res) {
 })
 
 router.get('/play/:cardName', function(req, res) {
+  var cardName = req.params.cardName;
+  models.Gamecards.findOne({
+    where: {
+      card_name: cardName
+    }
+  }).then(function(result) {
+    console.log(result.dataValues.item)
+    var arrayString = result.dataValues.item;
+    var arrayParsed = arrayString.split(', ');
+    console.log(arrayParsed);
+
+  })
   res.render('gameBoard');
 })
 

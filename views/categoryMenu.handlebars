@@ -9,7 +9,7 @@
   <h3 class="center red">{{category}}</h3>
   <ul class="menu-list">
     {{#each card}}
-    <li>{{card_name}}</li>
+    <li><a href="/play/{{card_name}}">{{card_name}}</a></li>
     {{/each}}
   </ul>
 </section>
@@ -24,7 +24,7 @@
     {{#each card}}
     <div class="category-box">
       <div class="">
-        <h4>{{card_name}}</h4>
+        <a href="/play/{{card_name}}"><h4>{{card_name}}</h4></a>
       </div>
     </div>
     {{/each}}

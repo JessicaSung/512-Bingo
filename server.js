@@ -20,6 +20,7 @@ app.engine('handlebars', exphbs({
   defaultLayout: 'main',
 }));
 app.set('view engine', 'handlebars');
+/*
 app.post('/authenticate', function(){
 	var body, claim;
 
@@ -31,17 +32,9 @@ app.post('/authenticate', function(){
 		};
 
 		var jwtVar = jwt.create(claim, app.get('jwtSecret'));
-		console.log(jwtVar);
-/*
-		this.body={
-			token:jwt.sign(claim,secret)
-		};	
-*/
-	/*}
-	else{
-		this.throw(401,"wrong user id or password");
-	}	*/	
+		console.log(jwtVar);	
 })
+*/
 // import routes
 var routes = require('./controllers/controller.js');
 app.use('/', routes);

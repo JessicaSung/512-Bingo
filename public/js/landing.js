@@ -72,7 +72,7 @@ $(document).ready(function() {
   $('#emailAddressUp').on('blur', function() {
     var email = $('#emailAddressUp').val();
     var atSign = email.search(/@/g);
-    console.log(atSign);
+
     if(atSign < 0) {
       error = true;
       $('.form-error').html('*Please enter a valid email!').show()
@@ -87,13 +87,12 @@ $(document).ready(function() {
   $('#confirmPassword').on('blur', function() {
     var password1 = $('#passwordUp').val();
     var password2 = $('#confirmPassword').val();
-    console.log(password1, password2);
 
     if(password1 != password2) {
       error = true;
-      $('.form-error').html('*Your passwords do not match!').show()
+      $('#sign-up-error').html('*Your passwords do not match!').show()
       setTimeout(function () {
-        $('.form-error').hide()
+        $('#sign-up-error').hide()
       }, 5000);
     } else {
       error = false;
@@ -102,14 +101,24 @@ $(document).ready(function() {
 
   $('#signUpButton').on('click', function() {
     var data = {
-      email: $('#emailUp').val(),
+      email: $('#emailAddressUp').val(),
       password: $('#passwordUp').val()
     }
 
-    console.log(error);
+
     if(error == false) {
-      console.log('no error');
       // AJAX CALL
+      $.post('/signup', data).then(function(response) {
+        console.log(response);
+        if(response) {
+          window.location = currentURL + '/menu';
+        } else {
+          $('#sign-up-error').html('*You already have an account! Please sign in.').show();
+          setTimeout(function () {
+            $('#sign-up-error').hide();
+          }, 5000);
+        }
+      })
     }
   })
 

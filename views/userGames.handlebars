@@ -9,8 +9,9 @@
 <section id="mobile-category" class="hide-on-med-and-up">
   <h3 class="center red">My Games</h3>
   <ul class="menu-list">
-    <li>we're all a little weird<i class="material-icons">chevron_right</i></li>
-    <li>climb that statue!<i class="material-icons">chevron_right</i></li>
+    {{#each card}}
+    <li>{{card_name}}<i class="material-icons">chevron_right</i></li>
+    {{/each}}
   </ul>
 </section>
 
@@ -21,15 +22,12 @@
   </p>
   <h3 class="red">my games</h3>
   <div class="">
+    {{#each card}}
     <div class="category-box">
       <div class="">
-        <h4>we're all a little weird<i class="material-icons">chevron_right</i></h4>
+        <h4>{{card_name}}<i class="material-icons">chevron_right</i></h4>
       </div>
     </div>
-    <div class="category-box">
-      <div class="">
-        <h4>climb that statue!<i class="material-icons">chevron_right</i></h4>
-      </div>
-    </div>
+    {{/each}}
   </div>
 </section>

@@ -89,7 +89,27 @@ router.get('/menu/:category', function(req, res) {
 })
 
 router.get('/my-games', function(req, res) {
-  res.render('userGames');
+  models.Users.findAll({
+    attributes: ['active_card'],
+    where: {
+      user_name: currentUser
+    }
+  }).then(function(result) {
+    var activeCards = result[0].dataValues.active_card;
+    console.log(activeCards);
+    models.Gamecards.findAll({
+      attributes: ['card_name'],
+      where: {
+        id: activeCards
+      }
+    }).then(function(result) {
+      var data = {
+        card: result
+      }
+
+      res.render('userGames', data);
+    })
+  })
 })
 
 router.get('/my-badges', function(req, res) {

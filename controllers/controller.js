@@ -5,6 +5,8 @@ var passwordHash = require('password-hash');
 
 models.sequelize.sync();
 
+var currentUser;
+
 router.get('/', function(req, res) {
   res.render('index');
 })
@@ -25,11 +27,40 @@ router.post('/', function(req, res) {
 
     var resultPassword = result[0].dataValues.password;
     var verifyPassword = passwordHash.verify(data.password, resultPassword);
-    console.log(verifyPassword);
+
     if(verifyPassword) {
       res.send(true);
+      currentUser = userName;
+      console.log(currentUser);
     } else {
       res.send(false);
+    }
+  })
+})
+
+router.post('/signup', function(req, res) {
+  console.log(req.body)
+  var email = req.body.email;
+  var password = req.body.password;
+  var hashedPassword = passwordHash.generate(password);
+  models.Users.findAll({
+    where: {
+      user_name: email
+    }
+  }).then(function(result) {
+    if(result.length > 0) {
+      res.send(false);
+    } else {
+      models.Users.create({
+        user_name: email,
+        password: hashedPassword,
+        active_card: 0,
+        items_found: null,
+        badge_level: 0
+      }).then(function() {
+        res.send(true);
+        currentUser = email;
+      })
     }
   })
 })

@@ -43,12 +43,27 @@ $(document).ready(function() {
   })
 
   // --------sign in button-----------------
+  var currentURL = window.location.origin;
+
   $('#signInButton').on('click', function() {
     var data = {
-      email: $('#email').val(),
+      email: $('#emailAddress').val(),
       password: $('#password').val()
     }
+
     // AJAX call to database
+    $.post('/', data).then(function(response) {
+      console.log(response);
+      if(response) {
+        window.location = currentURL + '/menu';
+      } else {
+        $('#sign-in-error').html("*We can't find you! Please check your email and password.").show();
+        setTimeout(function() {
+          $('#sign-in-error').hide();
+        }, 5000);
+
+      }
+    })
   })
 
   // -----sign up validation--------------
@@ -97,6 +112,6 @@ $(document).ready(function() {
       // AJAX CALL
     }
   })
- 
+
 
 })

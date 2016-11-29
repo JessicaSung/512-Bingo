@@ -56,9 +56,6 @@ body {
   .big-box:hover {
     cursor: pointer; }
 
-input[type=text] {
-  border-bottom: solid 3px; }
-
 input[type=text]:focus:not([read-only]) {
   box-shadow: none;
   border-width: 3px; }
@@ -488,5 +485,111 @@ h3 {
 
 .menu-back i, .menu-back p {
   color: #e95e6c; }
+
+.add-card h3 {
+  margin-top: 125px;
+  margin-bottom: 50px;
+  text-align: center; }
+.add-card .input-field {
+  width: 250px;
+  margin: auto; }
+  .add-card .input-field span {
+    color: #e95e6c;
+    font-size: 14px; }
+  .add-card .input-field .select-dropdown {
+    color: #e95e6c;
+    border-bottom: solid 2px #e95e6c; }
+.add-card .error-wrapper {
+  width: 250px;
+  height: 50px;
+  margin: auto; }
+  .add-card .error-wrapper p {
+    float: left;
+    width: 100px;
+    padding-top: 10px; }
+
+.card-name input[type=text] {
+  border-bottom: solid 3px #48515f;
+  margin-bottom: 40px; }
+  .card-name input[type=text]:focus {
+    color: #48515f;
+    border-bottom-color: #48515f; }
+.card-name label {
+  color: #48515f !important;
+  font-size: 24px;
+  text-align: center; }
+
+.box-input-wrapper {
+  width: 250px;
+  margin: auto;
+  margin-top: 40px; }
+  .box-input-wrapper .box-input {
+    margin-bottom: 20px;
+    position: relative;
+    width: 110px;
+    float: left;
+    border: solid 3px;
+    padding: 3px;
+    text-align: center;
+    line-height: 28px; }
+    .box-input-wrapper .box-input i {
+      vertical-align: text-bottom;
+      font-size: 20px;
+      font-weight: bold; }
+    .box-input-wrapper .box-input .edit-arrow {
+      display: none;
+      color: #e95e6c;
+      position: absolute;
+      top: 22px;
+      left: -12px;
+      font-size: 36px; }
+    .box-input-wrapper .box-input:nth-child(even) {
+      float: right; }
+    .box-input-wrapper .box-input:hover {
+      cursor: pointer; }
+  .box-input-wrapper .ready {
+    color: #61c5be;
+    border-color: #61c5be; }
+    .box-input-wrapper .ready i {
+      color: #61c5be; }
+  .box-input-wrapper .done, .box-input-wrapper .edit {
+    color: #e95e6c;
+    border-color: #e95e6c; }
+    .box-input-wrapper .done i, .box-input-wrapper .edit i {
+      color: #e95e6c; }
+
+.box-input-form {
+  display: none;
+  margin-bottom: 50px; }
+  .box-input-form input[type=text] {
+    border-bottom: solid 2px #e95e6c;
+    color: #e95e6c; }
+    .box-input-form input[type=text]:focus {
+      color: #e95e6c;
+      border-bottom-color: #e95e6c; }
+  .box-input-form label {
+    color: #e95e6c !important;
+    top: auto;
+    bottom: 30px; }
+  .box-input-form .active {
+    display: none; }
+  .box-input-form .done-button {
+    float: right;
+    border: solid 2px #e95e6c;
+    color: #e95e6c;
+    padding: 3px;
+    letter-spacing: 2px; }
+    .box-input-form .done-button:hover {
+      cursor: pointer; }
+
+.button-wrapper {
+  width: 250px;
+  margin: auto; }
+  .button-wrapper button {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    float: right;
+    color: #f6bd58;
+    border-color: #f6bd58; }
 
 /*# sourceMappingURL=style.css.map */

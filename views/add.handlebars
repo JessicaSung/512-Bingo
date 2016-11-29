@@ -1,0 +1,178 @@
+<!-- back arrow -->
+<div class="back">
+  <i class="material-icons">arrow_back</i><p>
+    back
+  </p>
+</div>
+
+<!-- add new game card -->
+<section class="add-card">
+  <h3 class="red">Add a card</h3>
+  <form>
+    <!-- card name input -->
+    <div class="input-field card-name">
+      <input id="cardName" type="text" name="add-card">
+      <label for="cardName">CARD NAME</label>
+    </div>
+    <!-- category select -->
+    <div class="input-field">
+      <select id="select-cat" name="add-card">
+        <option value="" disabled selected>card category</option>
+        <option value="1">FOOD</option>
+        <option value="2">PEOPLE</option>
+        <option value="3">PLACES</option>
+      </select>
+    </div>
+    <!-- Add boxes row 1 -->
+    <div class="box-input-wrapper">
+      <div class="box-input ready" data-box="box1">
+        box 1
+        <i class="material-icons add-check">add</i>
+        <i class="material-icons edit-arrow">arrow_drop_down</i>
+      </div>
+      <div class="box-input ready" data-box="box2">
+        box 2
+        <i class="material-icons add-check">add</i>
+        <i class="material-icons edit-arrow">arrow_drop_down</i>
+      </div>
+      <!-- left box input -->
+      <div class="box-input-form" id="box1">
+        <div class="input-field">
+          <input id="box-input-1" type="text" name="add-card">
+          <label for="box-input-1">what should we find?</label>
+        </div>
+        <div class="done-button">
+          done
+        </div>
+      </div>
+      <!-- right box input -->
+      <div class="box-input-form" id="box2">
+        <div class="input-field">
+          <input id="box-input-2" type="text" name="add-card">
+          <label for="box-input-2">what should we find?</label>
+        </div>
+        <div class="done-button">
+          done
+        </div>
+      </div>
+    </div>
+
+    <!-- Add boxes row 2 -->
+    <div class="box-input-wrapper">
+      <div class="box-input ready" data-box="box3">
+        box 3
+        <i class="material-icons add-check">add</i>
+        <i class="material-icons edit-arrow">arrow_drop_down</i>
+      </div>
+      <div class="box-input ready" data-box="box4">
+        box 4
+        <i class="material-icons add-check">add</i>
+        <i class="material-icons edit-arrow">arrow_drop_down</i>
+      </div>
+      <!-- left box input -->
+      <div class="box-input-form" id="box3">
+        <div class="input-field">
+          <input id="box-input-3" type="text" name="add-card">
+          <label for="box-input-3">what should we find?</label>
+        </div>
+        <div class="done-button">
+          done
+        </div>
+      </div>
+      <!-- right box input -->
+      <div class="box-input-form" id="box4">
+        <div class="input-field">
+          <input id="box-input-4" type="text" name="add-card">
+          <label for="box-input-4">what should we find?</label>
+        </div>
+        <div class="done-button">
+          done
+        </div>
+      </div>
+    </div>
+
+    <!-- Add boxes row 3 -->
+    <div class="box-input-wrapper">
+      <div class="box-input ready" data-box="box5">
+        box 5
+        <i class="material-icons add-check">add</i>
+        <i class="material-icons edit-arrow">arrow_drop_down</i>
+      </div>
+      <div class="box-input ready" data-box="box6">
+        box 6
+        <i class="material-icons add-check">add</i>
+        <i class="material-icons edit-arrow">arrow_drop_down</i>
+      </div>
+      <!-- left box input -->
+      <div class="box-input-form" id="box5">
+        <div class="input-field">
+          <input id="box-input-5" type="text" name="add-card">
+          <label for="box-input-5">what should we find?</label>
+        </div>
+        <div class="done-button">
+          done
+        </div>
+      </div>
+      <!-- right box input -->
+      <div class="box-input-form" id="box6">
+        <div class="input-field">
+          <input id="box-input-6" type="text" name="add-card">
+          <label for="box-input-6">what should we find?</label>
+        </div>
+        <div class="done-button">
+          done
+        </div>
+      </div>
+    </div>
+
+    <!-- Add boxes row 4 -->
+    <div class="box-input-wrapper">
+      <div class="box-input ready" data-box="box7">
+        box 7
+        <i class="material-icons add-check">add</i>
+        <i class="material-icons edit-arrow">arrow_drop_down</i>
+      </div>
+      <div class="box-input ready" data-box="box8">
+        box 8
+        <i class="material-icons add-check">add</i>
+        <i class="material-icons edit-arrow">arrow_drop_down</i>
+      </div>
+      <!-- left box input -->
+      <div class="box-input-form" id="box7">
+        <div class="input-field">
+          <input id="box-input-7" type="text" name="add-card">
+          <label for="box-input-7">what should we find?</label>
+        </div>
+        <div class="done-button">
+          done
+        </div>
+      </div>
+      <!-- right box input -->
+      <div class="box-input-form" id="box8">
+        <div class="input-field">
+          <input id="box-input-8" type="text" name="add-card">
+          <label for="box-input-8">what should we find?</label>
+        </div>
+        <div class="done-button">
+          done
+        </div>
+      </div>
+    </div>
+    <!-- submit button -->
+    <div class="button-wrapper">
+      <button class="medium-button" id="submit-card" disabled="disabled">
+        submit
+      </button>
+    </div>
+  </form>
+  <div class="error-wrapper">
+    <p class="form-error">*error</p>
+  </div>
+</section>
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<!-- Materialize Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+<!-- local js -->
+<script src="js/add.js" charset="utf-8"></script>

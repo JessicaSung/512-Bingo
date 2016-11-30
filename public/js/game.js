@@ -2,17 +2,21 @@ $(document).ready(function() {
 
   var currentURL = window.location.origin;
   var foundBoxes;
+  var cardName = $('.board-title').html();
+  console.log(cardName);
 
 
   // inital AJAX call to database to get marked boxes
-  $.post('/play').then(function(response) {
+  $.post('/play/'+cardName).then(function(response) {
     console.log(response);
-    foundBoxes = response.items_found.split(', ');
-    console.log(foundBoxes);
+    if(response) {
+      foundBoxes = response.items_found.split(', ');
+      console.log(foundBoxes);
 
-    foundBoxes.forEach(function(box) {
-      $('[data-box='+box+'] .star').show();
-    })
+      foundBoxes.forEach(function(box) {
+        $('[data-box='+box+'] .star').show();
+      })
+    }
   })
 
 

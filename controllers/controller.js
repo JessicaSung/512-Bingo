@@ -159,7 +159,8 @@ router.get('/play/:cardName', function(req, res) {
       var arrayParsed = arrayString.split(', ');
       console.log(arrayParsed);
       var data = {
-        square: arrayParsed
+        square: arrayParsed,
+        title: result.dataValues.card_name
       }
 
       res.render('gameBoard', data);
@@ -167,14 +168,36 @@ router.get('/play/:cardName', function(req, res) {
   }
 })
 
-router.post('/play', function(req, res) {
+// check for previously found items
+router.post('/play/:card', function(req, res) {
+  var cardName = req.params.card;
+  console.log(cardName);
   models.Users.findOne({
-    attributes: ['items_found'],
+    attributes: ['active_card'],
     where: {
       user_name: currentUser
     }
-  }).then(function(result) {
-    res.send(result);
+  }).then(function(response) {
+    var active_card = response.dataValues.active_card;
+    models.Gamecards.findOne({
+      attributes: ['card_name'],
+      where: {
+        id: active_card
+      }
+    }).then(function(result) {
+      if(result.dataValues.card_name === cardName) {
+        models.Users.findOne({
+          attributes: ['items_found'],
+          where: {
+            user_name: currentUser
+          }
+        }).then(function(result) {
+          res.send(result);
+        })
+      } else {
+        res.send(false);
+      }
+    })
   })
 })
 

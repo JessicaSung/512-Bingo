@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+  // mobile menu animation to expand contract circle
+
   $('#menu').on('click', function() {
     $('.mobile-main-menu').hide();
     $('.mobile-drop-menu').fadeIn();

@@ -1,17 +1,24 @@
+// DEPENDENCIES
+// ==============================================
 var express = require('express');
-var router = express.Router();
 var models = require('../models');
 var passwordHash = require('password-hash');
 
 
-models.sequelize.sync();
-
+// SETUP EXPRESS SERVER
+// ==============================================
+var router = express.Router();
 var currentUser;
 
+models.sequelize.sync();
+
+
+// displays the homepage
 router.get('/', function(req, res) {
   res.render('index');
 })
 
+// if a valid username/password is entered, user will be set as "currentUser"
 router.post('/', function(req, res) {
   var data = req.body;
   var userName = data.email;
@@ -25,7 +32,6 @@ router.post('/', function(req, res) {
       res.send(false);
       return false;
     }
-
     var resultPassword = result[0].dataValues.password;
     var verifyPassword = passwordHash.verify(data.password, resultPassword);
 
@@ -39,6 +45,7 @@ router.post('/', function(req, res) {
   })
 })
 
+// user sign up stores email and password
 router.post('/signup', function(req, res) {
   console.log(req.body)
   var email = req.body.email;
@@ -66,6 +73,7 @@ router.post('/signup', function(req, res) {
   })
 })
 
+// if user is set to "currentUser" above, user will see the menu page, otherwise redirected to the homepage
 router.get('/menu', function(req, res) {
   if(currentUser) {
     res.render('menu');
@@ -74,6 +82,7 @@ router.get('/menu', function(req, res) {
   }
 })
 
+// displays categories for user to choose
 router.get('/menu/:category', function(req, res) {
   if(!currentUser) {
     res.render('index');
@@ -96,6 +105,7 @@ router.get('/menu/:category', function(req, res) {
   }
 })
 
+// displays cards available for play
 router.get('/my-games', function(req, res) {
   if(!currentUser) {
     res.render('index')
@@ -124,6 +134,7 @@ router.get('/my-games', function(req, res) {
   }
 })
 
+// displays user's badges
 router.get('/my-badges', function(req, res) {
   if(!currentUser) {
     res.render('index')
@@ -132,6 +143,7 @@ router.get('/my-badges', function(req, res) {
   }
 })
 
+// diplays gamecard for play
 router.get('/play/:cardName', function(req, res) {
   if(!currentUser) {
     res.render('index');
@@ -151,7 +163,6 @@ router.get('/play/:cardName', function(req, res) {
       }
 
       res.render('gameBoard', data);
-
     })
   }
 })
@@ -167,6 +178,8 @@ router.post('/play', function(req, res) {
   })
 })
 
+// displays user's badges
+
 router.get('/badge', function(req, res) {
   if(!currentUser) {
     res.render('index');
@@ -175,6 +188,7 @@ router.get('/badge', function(req, res) {
   }
 })
 
+// user can submit a card
 router.get('/add', function(req, res) {
   if(!currentUser) {
     res.render('index');
@@ -184,11 +198,6 @@ router.get('/add', function(req, res) {
 })
 
 
-
-
-
-
-
-
-
+// Export router
+// =============================================================================
 module.exports = router;

@@ -133,7 +133,7 @@ router.get('/my-badges', function(req, res) {
 })
 
 router.get('/play/:cardName', function(req, res) {
-  if(!user) {
+  if(!currentUser) {
     res.render('index');
   } else {
     var cardName = req.params.cardName;
@@ -156,8 +156,19 @@ router.get('/play/:cardName', function(req, res) {
   }
 })
 
+router.post('/play', function(req, res) {
+  models.Users.findOne({
+    attributes: ['items_found'],
+    where: {
+      user_name: currentUser
+    }
+  }).then(function(result) {
+    res.send(result);
+  })
+})
+
 router.get('/badge', function(req, res) {
-  if(!currentUseruser) {
+  if(!currentUser) {
     res.render('index');
   } else {
     res.render('newBadge');

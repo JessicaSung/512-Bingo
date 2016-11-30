@@ -1,10 +1,19 @@
 $(document).ready(function() {
 
   var currentURL = window.location.origin;
+  var foundBoxes;
+
+
   // inital AJAX call to database to get marked boxes
-  // if res array.length == 8 {
-    // window.location = currentURL + '/badge'
-// }
+  $.post('/play').then(function(response) {
+    console.log(response);
+    foundBoxes = response.items_found.split(', ');
+    console.log(foundBoxes);
+
+    foundBoxes.forEach(function(box) {
+      $('[data-box='+box+'] .star').show();
+    })
+  })
 
   // ------box marking-------------------------
   var box;

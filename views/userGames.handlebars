@@ -10,7 +10,9 @@
   <h3 class="center red">My Games</h3>
   <ul class="menu-list">
     {{#each card}}
-    <li>{{card_name}}<i class="material-icons">chevron_right</i></li>
+    <li><a href="/play/{{card_name}}">
+      {{card_name}}<i class="material-icons">chevron_right</i></li>
+    </a>
     {{/each}}
   </ul>
 </section>
@@ -25,7 +27,9 @@
     {{#each card}}
     <div class="category-box">
       <div class="">
-        <h4>{{card_name}}<i class="material-icons">chevron_right</i></h4>
+        <a href="/play/{{card_name}}">
+          <h4>{{card_name}}<i class="material-icons">chevron_right</i></h4>
+        </a>
       </div>
     </div>
     {{/each}}

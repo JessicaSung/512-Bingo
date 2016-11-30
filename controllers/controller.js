@@ -127,9 +127,12 @@ router.get('/play/:cardName', function(req, res) {
     var arrayString = result.dataValues.item;
     var arrayParsed = arrayString.split(', ');
     console.log(arrayParsed);
+    var data = {
+      square: arrayParsed
+    }
 
+    res.render('gameBoard', data);
   })
-  res.render('gameBoard');
 })
 
 router.get('/badge', function(req, res) {

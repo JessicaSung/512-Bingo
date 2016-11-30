@@ -264,6 +264,25 @@ router.get('/badge', function(req, res) {
   }
 })
 
+router.post('/badge', function(req, res) {
+  models.Users.findOne({
+    where: {
+      user_name: currentUser
+    }
+  }).then(function(result) {
+    result.increment('badge_level');
+  }).then(function() {
+    models.Users.findOne({
+      attributes: ['badge_level'],
+      where: {
+        user_name: currentUser
+      }
+    }).then(function (result) {
+      res.send(result);
+    })
+  })
+})
+
 // user can submit a card
 router.get('/add', function(req, res) {
   if(!currentUser) {

@@ -1,9 +1,9 @@
 ![512 Bingo Logo](https://cloud.githubusercontent.com/assets/18690072/20717314/b969dd64-b61a-11e6-8227-77fbba6cddda.png)
 
 Contributors: 
-* Aly Doerscher,
-* Blake Roddy,
-* Erin Giannette,
+* Aly Doerscher
+* Erin Giannette
+* Blake Roddy
 * Jessica Sung
 
 
@@ -37,7 +37,6 @@ Contributors:
 * Heroku
 * JawsDB
 * Handlebars (server-side templating)
-* JSON Web Tokens (authentication)
 * Testing Framework 
 * GET and POST routes
 * MVC paradigm folder structure

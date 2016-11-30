@@ -172,6 +172,9 @@ router.get('/play/:cardName', function(req, res) {
 router.post('/play/:card', function(req, res) {
   var cardName = req.params.card;
   console.log(cardName);
+
+  // check if user's active card matches
+  // current card name
   models.Users.findOne({
     attributes: ['active_card'],
     where: {
@@ -186,6 +189,7 @@ router.post('/play/:card', function(req, res) {
       }
     }).then(function(result) {
       if(result.dataValues.card_name === cardName) {
+        // get user's found items
         models.Users.findOne({
           attributes: ['items_found'],
           where: {
@@ -199,6 +203,28 @@ router.post('/play/:card', function(req, res) {
       }
     })
   })
+})
+
+// add newly found items to database
+router.post('/found', function(req, res) {
+  var data = req.body['foundBoxes[]'];
+  var foundBoxes = data.toString();
+  console.log(foundBoxes);
+  foundBoxes = foundBoxes.replace(/[\[\]]/g, '');
+  console.log(foundBoxes);
+  models.Users.update(
+    {
+      items_found: foundBoxes
+    },
+    {
+      where: {
+        user_name: currentUser
+      }
+    }
+  ).then(function() {
+    res.send(true);
+  })
+
 })
 
 // displays user's badges

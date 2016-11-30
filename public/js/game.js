@@ -1,9 +1,8 @@
 $(document).ready(function() {
 
   var currentURL = window.location.origin;
-  var foundBoxes;
+  var foundBoxes = [];
   var cardName = $('.board-title').html();
-
 
   // inital AJAX call to database to get marked boxes
   $.post('/play/'+cardName).then(function(response) {

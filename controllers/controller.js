@@ -143,6 +143,17 @@ router.get('/my-badges', function(req, res) {
   }
 })
 
+router.post('/my-badges', function(req, res) {
+  models.Users.findOne({
+    attributes: ['badge_level'],
+    where: {
+      user_name: currentUser
+    }
+  }).then(function(result) {
+    res.send(result);
+  })
+})
+
 // diplays gamecard for play
 router.get('/play/:cardName', function(req, res) {
   if(!currentUser) {
@@ -262,6 +273,26 @@ router.get('/badge', function(req, res) {
   } else {
     res.render('newBadge');
   }
+})
+
+router.post('/badge', function(req, res) {
+  console.log('here');
+  models.Users.findOne({
+    where: {
+      user_name: currentUser
+    }
+  }).then(function(result) {
+    result.increment('badge_level');
+  }).then(function() {
+    models.Users.findOne({
+      attributes: ['badge_level'],
+      where: {
+        user_name: currentUser
+      }
+    }).then(function (result) {
+      res.send(result);
+    })
+  })
 })
 
 // user can submit a card

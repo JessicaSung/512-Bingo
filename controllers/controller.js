@@ -145,7 +145,7 @@ router.get('/my-badges', function(req, res) {
 
 // diplays gamecard for play
 router.get('/play/:cardName', function(req, res) {
-  if(!user) {
+  if(!currentUser) {
     res.render('index');
   } else {
     var cardName = req.params.cardName;
@@ -159,7 +159,8 @@ router.get('/play/:cardName', function(req, res) {
       var arrayParsed = arrayString.split(', ');
       console.log(arrayParsed);
       var data = {
-        square: arrayParsed
+        square: arrayParsed,
+        title: result.dataValues.card_name
       }
 
       res.render('gameBoard', data);
@@ -167,9 +168,96 @@ router.get('/play/:cardName', function(req, res) {
   }
 })
 
+// check for previously found items
+router.post('/play/:card', function(req, res) {
+  var cardName = req.params.card;
+  console.log(cardName);
+
+  // check if user's active card matches
+  // current card name
+  models.Users.findOne({
+    attributes: ['active_card'],
+    where: {
+      user_name: currentUser
+    }
+  }).then(function(response) {
+    var active_card = response.dataValues.active_card;
+    models.Gamecards.findOne({
+      attributes: ['card_name'],
+      where: {
+        id: active_card
+      }
+    }).then(function(result) {
+      if(result > 0 && result.dataValues.card_name === cardName) {
+        // get user's found items
+        models.Users.findOne({
+          attributes: ['items_found'],
+          where: {
+            user_name: currentUser
+          }
+        }).then(function(result) {
+          res.send(result);
+        })
+      } else {
+        res.send(false);
+      }
+    })
+  })
+})
+
+// set new active card
+router.post('/activate/:card', function(req, res) {
+  var newActiveCard = req.params.card;
+  // finds id of card from name
+  models.Gamecards.findOne({
+    attributes: ['id'],
+    where: {
+      card_name: newActiveCard
+    }
+  }).then(function(result) {
+    // set id to active_card value
+    var id = result.dataValues.id;
+    models.Users.update(
+      {
+        active_card: id
+      },
+      {
+        where: {
+        user_name: currentUser
+        }
+      }
+    )
+  }).then(function() {
+    res.send(true);
+  })
+})
+
+// add newly found items to database
+router.post('/found', function(req, res) {
+  var data = req.body['foundBoxes[]'];
+  var foundBoxes = data.toString();
+  console.log(foundBoxes);
+  foundBoxes = foundBoxes.replace(/[\[\]]/g, '');
+  console.log(foundBoxes);
+  models.Users.update(
+    {
+      items_found: foundBoxes
+    },
+    {
+      where: {
+        user_name: currentUser
+      }
+    }
+  ).then(function() {
+    res.send(true);
+  })
+
+})
+
 // displays user's badges
+
 router.get('/badge', function(req, res) {
-  if(!currentUseruser) {
+  if(!currentUser) {
     res.render('index');
   } else {
     res.render('newBadge');

@@ -188,7 +188,7 @@ router.post('/play/:card', function(req, res) {
         id: active_card
       }
     }).then(function(result) {
-      if(result.dataValues.card_name === cardName) {
+      if(result > 0 && result.dataValues.card_name === cardName) {
         // get user's found items
         models.Users.findOne({
           attributes: ['items_found'],
@@ -202,6 +202,33 @@ router.post('/play/:card', function(req, res) {
         res.send(false);
       }
     })
+  })
+})
+
+// set new active card
+router.post('/activate/:card', function(req, res) {
+  var newActiveCard = req.params.card;
+  // finds id of card from name
+  models.Gamecards.findOne({
+    attributes: ['id'],
+    where: {
+      card_name: newActiveCard
+    }
+  }).then(function(result) {
+    // set id to active_card value
+    var id = result.dataValues.id;
+    models.Users.update(
+      {
+        active_card: id
+      },
+      {
+        where: {
+        user_name: currentUser
+        }
+      }
+    )
+  }).then(function() {
+    res.send(true);
   })
 })
 

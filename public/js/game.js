@@ -15,6 +15,11 @@ $(document).ready(function() {
       foundBoxes.forEach(function(box) {
         $('[data-box='+box+'] .star').show();
       })
+    } else {
+      // else set as new card in database
+      $.post('/activate/'+cardName).then(function(response) {
+        console.log(response);
+      })
     }
   })
 

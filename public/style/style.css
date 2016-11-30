@@ -500,6 +500,9 @@ h3 {
     margin-top: 5px;
     font-size: 18px;
     letter-spacing: 2px; }
+  .newBadge #badge-message {
+    font-size: 20px;
+    margin-bottom: 20px; }
 
 .congrats {
   display: inline-block;

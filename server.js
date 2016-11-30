@@ -33,23 +33,6 @@ app.engine('handlebars', exphbs({
   defaultLayout: 'main',
 }));
 app.set('view engine', 'handlebars');
-/*
-app.post('/authenticate', function(){
-	var body, claim;
-
-	// body = yield parse(this);
-	// console.log(body);
-	//if (body.email ==='Erin'&& body.password==='12345'){
-		claim ={
-			userId:1
-		};
-
-		var jwtVar = jwt.create(claim, app.get('jwtSecret'));
-		console.log(jwtVar);
-})
-
-*/
-
 
 // import routes
 var routes = require('./controllers/controller.js');

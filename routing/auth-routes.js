@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // // JWT used to create, sign, and verify auth tokens
 // var jwt         = require('jsonwebtoken');
 // var nJwt	    = require('njwt');
@@ -60,7 +59,7 @@
 //         })
 //     })
 // }
-=======
+
 // JWT used to create, sign, and verify auth tokens
 var jwt         = require('jsonwebtoken');
 var nJwt	    = require('njwt');
@@ -121,4 +120,3 @@ module.exports = function(app){
         })
     })
 }
->>>>>>> master

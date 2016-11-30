@@ -505,9 +505,15 @@ h3 {
   }
   h4 {
     text-transform: uppercase;
+    color: $dark-blue;
   }
   &:last-child {
     margin-bottom: 100px;
+  }
+  h5 {
+    color: $dark-blue;
+    font-size: 16px;
+    letter-spacing: 2px;
   }
 }
 
@@ -681,12 +687,6 @@ h3 {
 .congrats {
   display: inline-block;
   border-bottom: solid 3px $orange;
-}
-
-.menu-back {
-  i, p {
-    color: $red;
-  }
 }
 
 // ------add new card-----------

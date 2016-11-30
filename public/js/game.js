@@ -4,7 +4,6 @@ $(document).ready(function() {
   var foundBoxes = [];
   var cardName = $('.board-title').html();
 
-
   // inital AJAX call to database to get marked boxes
   $.post('/play/'+cardName).then(function(response) {
     // if user has found items, show stars

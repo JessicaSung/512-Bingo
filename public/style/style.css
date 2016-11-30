@@ -373,9 +373,14 @@ h3 {
   .badge img {
     width: 200px; }
   .badge h4 {
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    color: #48515f; }
   .badge:last-child {
     margin-bottom: 100px; }
+  .badge h5 {
+    color: #48515f;
+    font-size: 16px;
+    letter-spacing: 2px; }
 
 .tablet-badges {
   width: 750px;
@@ -507,9 +512,6 @@ h3 {
 .congrats {
   display: inline-block;
   border-bottom: solid 3px #f6bd58; }
-
-.menu-back i, .menu-back p {
-  color: #e95e6c; }
 
 .add-card h3 {
   margin-top: 125px;

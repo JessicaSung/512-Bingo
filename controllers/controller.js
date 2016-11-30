@@ -67,78 +67,111 @@ router.post('/signup', function(req, res) {
 })
 
 router.get('/menu', function(req, res) {
-  res.render('menu');
+  if(currentUser) {
+    res.render('menu');
+  } else {
+    res.render('index');
+  }
 })
 
 router.get('/menu/:category', function(req, res) {
-  var category = req.params.category.replace(/-/g, ' ');
+  if(!currentUser) {
+    res.render('index');
+  } else {
+    var category = req.params.category.replace(/-/g, ' ');
 
-  models.Gamecards.findAll({
-    attributes: ['card_name'],
-    where: {
-      category: category
-    }
-  }).then(function(result) {
-    var data = {
-      category: category,
-      card: result
-    }
-
-    res.render('categoryMenu', data);
-  })
-})
-
-router.get('/my-games', function(req, res) {
-  models.Users.findAll({
-    attributes: ['active_card'],
-    where: {
-      user_name: currentUser
-    }
-  }).then(function(result) {
-    var activeCards = result[0].dataValues.active_card;
-    console.log(activeCards);
     models.Gamecards.findAll({
       attributes: ['card_name'],
       where: {
-        id: activeCards
+        category: category
       }
     }).then(function(result) {
       var data = {
+        category: category,
         card: result
       }
 
-      res.render('userGames', data);
+      res.render('categoryMenu', data);
     })
-  })
+  }
+})
+
+router.get('/my-games', function(req, res) {
+  if(!currentUser) {
+    res.render('index')
+  } else {
+    models.Users.findAll({
+      attributes: ['active_card'],
+      where: {
+        user_name: currentUser
+      }
+    }).then(function(result) {
+      var activeCards = result[0].dataValues.active_card;
+      console.log(activeCards);
+      models.Gamecards.findAll({
+        attributes: ['card_name'],
+        where: {
+          id: activeCards
+        }
+      }).then(function(result) {
+        var data = {
+          card: result
+        }
+
+        res.render('userGames', data);
+      })
+    })
+  }
 })
 
 router.get('/my-badges', function(req, res) {
-  res.render('userBadges');
+  if(!currentUser) {
+    res.render('index')
+  } else {
+    res.render('userBadges');
+  }
 })
 
 router.get('/play/:cardName', function(req, res) {
-  var cardName = req.params.cardName;
-  models.Gamecards.findOne({
-    where: {
-      card_name: cardName
-    }
-  }).then(function(result) {
-    console.log(result.dataValues.item)
-    var arrayString = result.dataValues.item;
-    var arrayParsed = arrayString.split(', ');
-    console.log(arrayParsed);
+  if(!user) {
+    res.render('index');
+  } else {
+    var cardName = req.params.cardName;
+    models.Gamecards.findOne({
+      where: {
+        card_name: cardName
+      }
+    }).then(function(result) {
+      console.log(result.dataValues.item)
+      var arrayString = result.dataValues.item;
+      var arrayParsed = arrayString.split(', ');
+      console.log(arrayParsed);
 
-  })
-  res.render('gameBoard');
+    })
+    res.render('gameBoard');
+  }
 })
 
 router.get('/badge', function(req, res) {
-  res.render('newBadge');
+  if(!currentUseruser) {
+    res.render('index');
+  } else {
+    res.render('newBadge');
+  }
 })
 
 router.get('/add', function(req, res) {
-  res.render('add');
+  if(!currentUser) {
+    res.render('index');
+  } else {
+    res.render('add');
+  }
 })
+
+
+
+
+
 
 
 

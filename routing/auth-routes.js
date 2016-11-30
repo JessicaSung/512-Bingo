@@ -1,18 +1,14 @@
 // JWT used to create, sign, and verify auth tokens
 var jwt         = require('jsonwebtoken');
-var nJwt	    = require('njwt'); 
+var nJwt	    = require('njwt');
 var Cookies     = require('cookies');
 
-module.exports = function(app){ 
-	
+module.exports = function(app){
 
 	app.post('/auth', function(req, res){
 		console.log("inside app.post");
-		var email = req.body.email;
-    	var password = req.body.password;
-        console.log("email: " + email + " password: " + password);
     	//verify password and if it is correct get json web token
-    	var token = jwt.sign(admin, app.get('jwtSecret'), {
+    	var token = jwt.sign( app.get('jwtSecret'), {
             expiresIn: 1440 // Token is given but will expire in 24 minutes (requiring a re-login)
         });
         console.log("token: " + token);
@@ -22,26 +18,29 @@ module.exports = function(app){
         });
 
             // for debug purposes
-            
-            
+
+
             console.log("Cookie Sent");
     	/*
 		var claim ={
      		userId:1
     	};
-		
+
     	var jwtVar = nJwt.create(claim, app.get('jwtSecret'));
     	console.log(jwtVar);
 		*/
 	});
 	// app.all('*'): every entry into the site that proceeds this route file
     // (essentially, api-routes.js )
-    app.all('*', function(req, res, next) {
+    app.all('/*', function(req, res, next) {
     	console.log("inside app.all");
-        var token = new Cookies(req, res).get('access_token');
+        // var token = new Cookies(req, res).get('access_token');
 
+				var token = jwt.sign( app.get('jwtSecret'), {
+					expiresIn: 1440
+				})
         // remove after debugging
-        console.log(token);
+        console.log('token :'+token);
 
         // jwtSecret (set in server.js)
         jwt.verify(token, app.get('jwtSecret'), function(err, decoded) {

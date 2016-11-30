@@ -50,11 +50,10 @@ app.post('/authenticate', function(){
 
 */
 
+
 // import routes
 var routes = require('./controllers/controller.js');
 app.use('/', routes);
-
-require('./routing/auth-routes.js')(app);
 
 
 models.sequelize.sync();

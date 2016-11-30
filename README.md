@@ -37,7 +37,6 @@ Contributors:
 * Heroku
 * JawsDB
 * Handlebars (server-side templating)
-* JSON Web Tokens (authentication)
 * Testing Framework 
 * GET and POST routes
 * MVC paradigm folder structure

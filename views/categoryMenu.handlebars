@@ -6,11 +6,11 @@
 
 <!-- mobile category menu -->
 <section id="mobile-category" class="hide-on-med-and-up">
-  <h3 class="center red">people</h3>
+  <h3 class="center red">{{category}}</h3>
   <ul class="menu-list">
-    <li>we're all a little weird</li>
-    <li>that guy at that place</li>
-    <li>climb that statue!</li>
+    {{#each card}}
+    <li>{{card_name}}</li>
+    {{/each}}
   </ul>
 </section>
 
@@ -19,22 +19,14 @@
   <p class="sign-out">
     sign out
   </p>
-  <h3 class="red">people</h3>
+  <h3 class="red">{{category}}</h3>
   <div class="">
+    {{#each card}}
     <div class="category-box">
       <div class="">
-        <h4>we're all a little weird</h4>
+        <h4>{{card_name}}</h4>
       </div>
     </div>
-    <div class="category-box">
-      <div class="">
-        <h4>that guy at that place</h4>
-      </div>
-    </div>
-    <div class="category-box">
-      <div class="">
-        <h4>climb that statue!</h4>
-      </div>
-    </div>
+    {{/each}}
   </div>
 </section>

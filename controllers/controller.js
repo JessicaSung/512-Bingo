@@ -3,6 +3,7 @@ var router = express.Router();
 var models = require('../models');
 var passwordHash = require('password-hash');
 
+
 models.sequelize.sync();
 
 var currentUser;
@@ -70,18 +71,52 @@ router.get('/menu', function(req, res) {
 })
 
 router.get('/menu/:category', function(req, res) {
-  res.render('categoryMenu');
+  var category = req.params.category.replace(/-/g, ' ');
+
+  models.Gamecards.findAll({
+    attributes: ['card_name'],
+    where: {
+      category: category
+    }
+  }).then(function(result) {
+    var data = {
+      category: category,
+      card: result
+    }
+
+    res.render('categoryMenu', data);
+  })
 })
 
 router.get('/my-games', function(req, res) {
-  res.render('userGames');
+  models.Users.findAll({
+    attributes: ['active_card'],
+    where: {
+      user_name: currentUser
+    }
+  }).then(function(result) {
+    var activeCards = result[0].dataValues.active_card;
+    console.log(activeCards);
+    models.Gamecards.findAll({
+      attributes: ['card_name'],
+      where: {
+        id: activeCards
+      }
+    }).then(function(result) {
+      var data = {
+        card: result
+      }
+
+      res.render('userGames', data);
+    })
+  })
 })
 
 router.get('/my-badges', function(req, res) {
   res.render('userBadges');
 })
 
-router.get('/play', function(req, res) {
+router.get('/play/:cardName', function(req, res) {
   res.render('gameBoard');
 })
 

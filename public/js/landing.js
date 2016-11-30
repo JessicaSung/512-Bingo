@@ -3,11 +3,11 @@ $(document).ready(function() {
   // ------sign in/up button clicks--------
   $('#signIn').on('click', function() {
     slideToSign('#signInView');
-  })
+  });
 
   $('#signUp').on('click', function() {
     slideToSign('#signUpView');
-  })
+  });
 
   // animates sliding sign in and sign up divs
   function slideToSign(view) {
@@ -19,14 +19,13 @@ $(document).ready(function() {
   }
 
   // --------toggle between sign in/up-------
-
   $('#toggleSignIn').on('click', function() {
     toggleSignView('#signUpView', '#signInView');
-  })
+  });
 
   $('#toggleSignUp').on('click', function() {
     toggleSignView('#signInView', '#signUpView');
-  })
+  });
 
   // controls sliding animation between sign in and sign up
   function toggleSignView(current, next) {
@@ -36,14 +35,13 @@ $(document).ready(function() {
   }
 
   // --------landing home------------------
-
   // show/hide landing when logo clicked
   $('#landing-corner-logo').on('click', function() {
     $('#signInView').hide();
     $('#signUpView').hide();
     $(this).hide();
     $('#landing').css('right', '0').show();
-  })
+  });
 
   // --------sign in button-----------------
   var currentURL = window.location.origin;
@@ -68,15 +66,14 @@ $(document).ready(function() {
         }, 5000);
 
       }
-    })
-  })
+    });
+  });
 
   // -----sign up validation--------------
-
   // track whether there are errors
   var error = true;
 
-  // on blur events happen when clicked out on input
+  // on blur events happen when clicked out of input
   $('#emailAddressUp').on('blur', function() {
     var email = $('#emailAddressUp').val();
     // checks for @ in emaill address
@@ -95,14 +92,14 @@ $(document).ready(function() {
       // if @ exists sets error to false
       error = false;
     }
-  })
+  });
 
   $('#confirmPassword').on('blur', function() {
     // password and confirm password entries
     var password1 = $('#passwordUp').val();
     var password2 = $('#confirmPassword').val();
 
-    // if passwords don't match sets error to true
+    // if passwords don't match, sets error to true
     if(password1 != password2) {
       error = true;
       $('#sign-up-error').html('*Your passwords do not match!').show()
@@ -112,7 +109,7 @@ $(document).ready(function() {
     } else {
       error = false;
     }
-  })
+  });
 
   //  gets data and makes post request on div click
   $('#signUpButton').on('click', function() {
@@ -121,14 +118,14 @@ $(document).ready(function() {
       password: $('#passwordUp').val()
     }
 
-    // if no errors in form, can make post request
+    // if no errors in form, make post request
     if(error == false) {
       // AJAX CALL
       $.post('/signup', data).then(function(response) {
         console.log(response);
         if(response) {
           // if user does not exists in database,
-          // add new user, send true and redirect to menu
+          // add new user, send true, and redirect to menu
           window.location = currentURL + '/menu';
         } else {
           // show error to prompt sign in (response is false)
@@ -137,9 +134,9 @@ $(document).ready(function() {
             $('#sign-up-error').hide();
           }, 5000);
         }
-      })
+      });
     }
-  })
+  });
 
 
-})
+});

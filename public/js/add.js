@@ -25,7 +25,7 @@ $(document).ready(function() {
     $(this).addClass('edit');
     // shows editing arrow
     $(this).children('.edit-arrow').show();
-  })
+  });
 
   // done button
   $('.done-button').on('click', function() {
@@ -42,7 +42,7 @@ $(document).ready(function() {
       $('[data-box='+formNumber+']').removeClass('edit');
       $('[data-box='+formNumber+']').addClass('done');
 
-      // if all 8 elements have the class done no errors
+      // if all 8 elements have the class done, no errors
       if($('.done').length == 8) {
         errors = false;
       }
@@ -56,7 +56,7 @@ $(document).ready(function() {
       }
       console.log(errors);
     }
-  })
+  });
 
   $('#cardName, #select-cat').on('blur', function() {
     // test same erros as above
@@ -70,11 +70,11 @@ $(document).ready(function() {
       $('#submit-card').attr('disabled', false);
     }
     console.log(errors);
-  })
+  });
 
   // submit button
   $('#submit-card').on('click', function() {
     console.log($('.done'));
-  })
+  });
 
-})
+});

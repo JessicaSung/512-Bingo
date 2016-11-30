@@ -12,7 +12,7 @@ $(document).ready(function() {
     }, 'slow');
     $('#menu').hide();
     $('#x').show();
-  })
+  });
 
   $('#x').on('click', function() {
     $('.mobile-drop-menu').hide();
@@ -24,8 +24,7 @@ $(document).ready(function() {
     $('.mobile-main-menu').fadeIn();
     $('#x').hide();
     $('#menu').show();
-  })
+  });
 
 
-
-})
+});

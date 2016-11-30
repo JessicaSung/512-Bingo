@@ -265,6 +265,7 @@ router.get('/badge', function(req, res) {
 })
 
 router.post('/badge', function(req, res) {
+  console.log('here');
   models.Users.findOne({
     where: {
       user_name: currentUser

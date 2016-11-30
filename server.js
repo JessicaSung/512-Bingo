@@ -55,6 +55,10 @@ app.post('/authenticate', function(){
 var routes = require('./controllers/controller.js');
 app.use('/', routes);
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> master
 
 models.sequelize.sync();
 

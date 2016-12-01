@@ -102,6 +102,11 @@ input[type=text]:focus:not([read-only]) {
   border-width: 3px;
 }
 
+input[type=password]:focus:not([read-only]) {
+  box-shadow: none;
+  border-width: 3px;
+}
+
 .input-field label {
   color: $blue;
   letter-spacing: 2px;
@@ -245,6 +250,17 @@ h3 {
       border-color: $blue;
     }
   }
+  input[type=password] {
+    border-color: $blue;
+    color: $blue;
+    &:focus {
+      color: $blue;
+      border-color: $blue;
+    }
+  }
+  label {
+    color: $blue;
+  }
   button {
     color: $blue;
     border-color: $blue;
@@ -253,6 +269,14 @@ h3 {
 
 #sign-up-form {
   input[type=text] {
+    border-color: $red;
+    color: $red;
+    &:focus {
+      color: $red;
+      border-color: $red;
+    }
+  }
+  input[type=password] {
     border-color: $red;
     color: $red;
     &:focus {

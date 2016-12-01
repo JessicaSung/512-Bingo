@@ -68,6 +68,10 @@ input[type=text]:focus:not([read-only]) {
   box-shadow: none;
   border-width: 3px; }
 
+input[type=password]:focus:not([read-only]) {
+  box-shadow: none;
+  border-width: 3px; }
+
 .input-field label {
   color: #61c5be;
   letter-spacing: 2px; }
@@ -182,6 +186,14 @@ h3 {
   #sign-in-form input[type=text]:focus {
     color: #61c5be;
     border-color: #61c5be; }
+#sign-in-form input[type=password] {
+  border-color: #61c5be;
+  color: #61c5be; }
+  #sign-in-form input[type=password]:focus {
+    color: #61c5be;
+    border-color: #61c5be; }
+#sign-in-form label {
+  color: #61c5be; }
 #sign-in-form button {
   color: #61c5be;
   border-color: #61c5be; }
@@ -190,6 +202,12 @@ h3 {
   border-color: #e95e6c;
   color: #e95e6c; }
   #sign-up-form input[type=text]:focus {
+    color: #e95e6c;
+    border-color: #e95e6c; }
+#sign-up-form input[type=password] {
+  border-color: #e95e6c;
+  color: #e95e6c; }
+  #sign-up-form input[type=password]:focus {
     color: #e95e6c;
     border-color: #e95e6c; }
 #sign-up-form label {

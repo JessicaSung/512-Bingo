@@ -742,7 +742,6 @@ h3 {
   margin: auto;
   margin-top: 40px;
   .box-input {
-    margin-bottom: 20px;
     position: relative;
     width: 110px;
     float: left;
@@ -789,6 +788,8 @@ h3 {
 .box-input-form {
   display: none;
   margin-bottom: 50px;
+  width: 250px;
+  margin: auto;
   input[type=text] {
     border-bottom: solid 2px $red;
     color: $red;

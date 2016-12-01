@@ -486,6 +486,11 @@ h3 {
   position: fixed;
   top: 0;
   left: 0; }
+  .mobile-modal .locationFound {
+    text-decoration: underline;
+    display: none; }
+    .mobile-modal .locationFound:hover {
+      cursor: pointer; }
 
 .modal-message {
   width: 300px;

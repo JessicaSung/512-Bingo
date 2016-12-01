@@ -22,18 +22,52 @@ $(document).ready(function() {
     }
   })
 
+  // --------- AJAX for geolocation ---------------
+
+  var postURL = 'https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyAbRDkbs3zySDMsJhtGcVMGHEcX5bP3bsY';
+  var userLocation;
+
+  $.post(postURL).then(function(response) {
+    console.log(response);
+    userLocation = response.location.lat + ' ' + response.location.lng;
+  })
+
 
   // ------box marking-------------------------
   var box;
+  var boxLocation;
 
   // mobile star
   $('.mobile-box').on('click', function() {
-    $('.mobile-modal').slideDown();
-    $('body').css('overflow', 'hidden');
     box = $(this).attr('data-box');
+    boxLocation =$(this).attr('data-location');
+    if(boxLocation == 0) {
+      $('#modalMnoLocation').slideDown();
+    } else if(boxLocation != userLocation) {
+      $('#modalMLocation h4').html("Hmm, it doens't look like you're there yet!");
+      $('.locationFound').show();
+      $('#modalMLocation').slideDown();
+      setTimeout(function() {
+        $('#modalMLocation').slideUp();
+        $('.locationFound').hide();
+        $('body').css('overflow', 'auto');
+      }, 5000);
+    } else {
+      $('#modalMLocation h4').html("Nice job! You found it.");
+      $('#modalMLocation').slideDown();
+      setTimeout(function() {
+        $('#modalMLocation').slideUp();
+        $('body').css('overflow', 'auto');
+        $('[data-box='+box+'] .star').show();
+        cardToArray(box);
+        foundCardtoDB();
+        completeCardCheck();
+      }, 3000);
+    }
+    $('body').css('overflow', 'hidden');
   });
 
-  $('.mobile-modal .found').on('click', function() {
+  $('#modalMnoLocation .found').on('click', function() {
     $('body').css('overflow', 'auto');
     $('.mobile-modal').slideUp();
     $('[data-box='+box+'] .star').show();
@@ -49,8 +83,9 @@ $(document).ready(function() {
 
   // tablet+ star
   $('.tablet-box').on('click', function() {
-    $('.tablet-modal').slideDown();
     box = $(this).attr('data-box');
+    boxLocation =$(this).attr('data-location');
+    $('.tablet-modal').slideDown();
   });
 
   $('.tablet-modal .found').on('click', function() {

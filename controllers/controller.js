@@ -162,17 +162,21 @@ router.get('/play/:cardName', function(req, res) {
   } else {
     var cardName = req.params.cardName;
     models.Gamecards.findOne({
+      attributes: ['item', 'locations'],
       where: {
         card_name: cardName
       }
     }).then(function(result) {
-      console.log(result.dataValues.item)
-      var arrayString = result.dataValues.item;
-      var arrayParsed = arrayString.split(', ');
-      console.log(arrayParsed);
+      console.log(result.dataValues);
+      var itemString = result.dataValues.item;
+      var itemParsed = itemString.split(', ');
+      var locationString = result.dataValues.locations;
+      var locationParsed = locationString.split(',');
+      console.log(locationParsed);
       var data = {
-        square: arrayParsed,
-        title: result.dataValues.card_name
+        square: itemParsed,
+        title: result.dataValues.card_name,
+        locations: locationParsed
       }
 
       res.render('gameBoard', data);

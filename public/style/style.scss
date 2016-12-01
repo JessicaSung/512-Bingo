@@ -654,6 +654,13 @@ h3 {
   position: fixed;
   top: 0;
   left: 0;
+  .locationFound {
+    text-decoration: underline;
+    display: none;
+    &:hover {
+      cursor: pointer;
+    }
+  }
 }
 
 .modal-message {

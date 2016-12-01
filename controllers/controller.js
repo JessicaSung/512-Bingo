@@ -78,14 +78,14 @@ router.get('/menu', function(req, res) {
   if(currentUser) {
     res.render('menu');
   } else {
-    res.render('index');
+    res.redirect('/');
   }
 })
 
 // displays categories for user to choose
 router.get('/menu/:category', function(req, res) {
   if(!currentUser) {
-    res.render('index');
+    res.redirect('/');
   } else {
     var category = req.params.category.replace(/-/g, ' ');
 
@@ -108,7 +108,7 @@ router.get('/menu/:category', function(req, res) {
 // displays cards available for play
 router.get('/my-games', function(req, res) {
   if(!currentUser) {
-    res.render('index')
+    res.redirect('/');
   } else {
     models.Users.findAll({
       attributes: ['active_card'],
@@ -137,12 +137,13 @@ router.get('/my-games', function(req, res) {
 // displays user's badges
 router.get('/my-badges', function(req, res) {
   if(!currentUser) {
-    res.render('index')
+    res.redirect('/');
   } else {
     res.render('userBadges');
   }
 })
 
+// displays user's badges
 router.post('/my-badges', function(req, res) {
   models.Users.findOne({
     attributes: ['badge_level'],
@@ -157,7 +158,7 @@ router.post('/my-badges', function(req, res) {
 // diplays gamecard for play
 router.get('/play/:cardName', function(req, res) {
   if(!currentUser) {
-    res.render('index');
+    res.redirect('/');
   } else {
     var cardName = req.params.cardName;
     models.Gamecards.findOne({
@@ -265,16 +266,15 @@ router.post('/found', function(req, res) {
 
 })
 
-// displays user's badges
-
 router.get('/badge', function(req, res) {
   if(!currentUser) {
-    res.render('index');
+    res.redirect('/');
   } else {
     res.render('newBadge');
   }
 })
 
+// increment badge level and display appropriate badge
 router.post('/badge', function(req, res) {
   console.log('here');
   models.Users.findOne({
@@ -298,14 +298,16 @@ router.post('/badge', function(req, res) {
 // user can submit a card
 router.get('/add', function(req, res) {
   if(!currentUser) {
-    res.render('index');
+    res.redirect('/');
   } else {
     res.render('add');
   }
 })
 
+// add new card to database
 router.post('/add', function(req, res) {
   var data = req.body.add;
+  // convert items from array into string
   var boxes = data.slice(2).join();
   models.Gamecards.create({
     card_name: data[0],
@@ -314,6 +316,12 @@ router.post('/add', function(req, res) {
   }).then(function() {
     res.redirect('menu');
   })
+})
+
+// clear currentUser for sign-out
+router.get('/sign-out', function(req, res) {
+  currentUser = undefined;
+  res.redirect('/');
 })
 
 

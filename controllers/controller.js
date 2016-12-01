@@ -304,6 +304,18 @@ router.get('/add', function(req, res) {
   }
 })
 
+router.post('/add', function(req, res) {
+  var data = req.body.add;
+  var boxes = data.slice(2).join();
+  models.Gamecards.create({
+    card_name: data[0],
+    category: data[1],
+    item: boxes
+  }).then(function() {
+    res.redirect('menu');
+  })
+})
+
 
 // Export router
 // =============================================================================

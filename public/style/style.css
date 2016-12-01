@@ -514,7 +514,7 @@ h3 {
   border-bottom: solid 3px #f6bd58; }
 
 .add-card h3 {
-  margin-top: 125px;
+  margin-top: 100px;
   margin-bottom: 50px;
   text-align: center; }
 .add-card .input-field {
@@ -551,7 +551,6 @@ h3 {
   margin: auto;
   margin-top: 40px; }
   .box-input-wrapper .box-input {
-    margin-bottom: 20px;
     position: relative;
     width: 110px;
     float: left;
@@ -587,7 +586,9 @@ h3 {
 
 .box-input-form {
   display: none;
-  margin-bottom: 50px; }
+  margin-bottom: 50px;
+  width: 250px;
+  margin: auto; }
   .box-input-form input[type=text] {
     border-bottom: solid 2px #e95e6c;
     color: #e95e6c; }

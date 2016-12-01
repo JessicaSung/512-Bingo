@@ -657,6 +657,7 @@ h3 {
   .locationFound {
     text-decoration: underline;
     display: none;
+    letter-spacing: 2px;
     &:hover {
       cursor: pointer;
     }

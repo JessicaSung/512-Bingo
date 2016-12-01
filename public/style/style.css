@@ -488,7 +488,8 @@ h3 {
   left: 0; }
   .mobile-modal .locationFound {
     text-decoration: underline;
-    display: none; }
+    display: none;
+    letter-spacing: 2px; }
     .mobile-modal .locationFound:hover {
       cursor: pointer; }
 

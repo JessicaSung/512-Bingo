@@ -44,7 +44,7 @@ $(document).ready(function() {
     if(boxLocation == 0) {
       $('#modalMnoLocation').slideDown();
     } else if(boxLocation != userLocation) {
-      $('#modalMLocation h4').html("Hmm, it doens't look like you're there yet!");
+      $('#modalMLocation h4').html("Hmm, it doesn't look like you're there yet!");
       $('.locationFound').show();
       $('#modalMLocation').slideDown();
       setTimeout(function() {
@@ -67,7 +67,8 @@ $(document).ready(function() {
     $('body').css('overflow', 'hidden');
   });
 
-  $('#modalMnoLocation .found').on('click', function() {
+
+  $('.locationFound, #modalMnoLocation .found').on('click', function() {
     $('body').css('overflow', 'auto');
     $('.mobile-modal').slideUp();
     $('[data-box='+box+'] .star').show();

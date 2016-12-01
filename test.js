@@ -1,12 +1,13 @@
-'use strict';
+var data = [ 'Test Card',
+  '3',
+  'box 1',
+  'box 2',
+  'box 3',
+  'box 4',
+  'box 5',
+  'box 6',
+  'box 7',
+  'box 8' ]
 
-var should = require('chai').should(),
-  titleize = require('../titleize.js');
-
-describe('Titleize', function () {
- it('should capitalize initial letter of each word in input', function () {
-   titleize('the highball').should.equal('The Highball');
- });
- it('should properly case mixed case strings', function () {
-   titleize('Mr pOOpertin').should.equal('Mr. Poopertin');
-  });
+var boxes = data.slice(2).join();
+console.log(boxes);

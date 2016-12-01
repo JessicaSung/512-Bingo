@@ -6,6 +6,7 @@ $(document).ready(function() {
 
   // inital AJAX call to database to get marked boxes
   $.post('/play/'+cardName).then(function(response) {
+    console.log(response);
     // if user has found items, show stars
     if(response) {
       foundBoxes = response.items_found.split(',');
@@ -13,6 +14,7 @@ $(document).ready(function() {
 
       foundBoxes.forEach(function(box) {
         $('[data-box='+box+'] .star').show();
+        $('[data-box='+box+'] .tablet-star').show();
       })
     } else {
       // else set as new card in database
@@ -68,7 +70,7 @@ $(document).ready(function() {
   });
 
 
-  $('.locationFound, #modalMnoLocation .found').on('click', function() {
+  $('#locationFoundM, #modalMnoLocation .found').on('click', function() {
     $('body').css('overflow', 'auto');
     $('.mobile-modal').slideUp();
     $('[data-box='+box+'] .star').show();
@@ -86,10 +88,30 @@ $(document).ready(function() {
   $('.tablet-box').on('click', function() {
     box = $(this).attr('data-box');
     boxLocation =$(this).attr('data-location');
-    $('.tablet-modal').slideDown();
+    if(boxLocation == 0) {
+      $('#modalTnoLocation').slideDown();
+    } else if(boxLocation != userLocation) {
+      $('#modalTLocation h4').html("Hmm, it doesn't look like you're there yet!");
+      $('.locationFound').show();
+      $('#modalTLocation').slideDown();
+      setTimeout(function() {
+        $('#modalTLocation').slideUp();
+        $('.locationFound').hide();
+      }, 5000);
+    } else {
+      $('#modalTLocation h4').html("Nice job! You found it.");
+      $('#modalTLocation').slideDown();
+      setTimeout(function() {
+        $('#modalTLocation').slideUp();
+        $('[data-box='+box+'] .tablet-star').show();
+        cardToArray(box);
+        foundCardtoDB();
+        completeCardCheck();
+      }, 3000);
+    }
   });
 
-  $('.tablet-modal .found').on('click', function() {
+  $('#locationFoundT, .tablet-modal .found').on('click', function() {
     $('.tablet-modal').slideUp();
     $('[data-box='+box+'] .tablet-star').show();
     cardToArray(box);

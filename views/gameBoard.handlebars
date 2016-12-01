@@ -91,7 +91,7 @@
 <div class="mobile-modal hide-on-med-and-up" id="modalMLocation">
   <div class="modal-message">
     <h4></h4>
-    <div class="locationFound red">no, really, I found it.</div>
+    <div class="locationFound red" id="locationFoundM">no, really, I found it.</div>
   </div>
 </div>
 
@@ -174,12 +174,20 @@
   </div>
 </section>
 
-<!-- Tablet Modal -->
-<div class="tablet-modal hide-on-small-only">
+<!-- Tablet Modal No Location -->
+<div class="tablet-modal hide-on-small-only" id="modalTnoLocation">
   <div class="modal-message">
     <h4>Awesome! You found it?</h4>
     <button class="medium-button red-box notFound">Oh...no</button>
     <button class="medium-button blue-box found">You bet</button>
+  </div>
+</div>
+
+<!-- Tablet Modal With Location -->
+<div class="tablet-modal hide-on-small-only" id="modalTLocation">
+  <div class="modal-message">
+    <h4></h4>
+    <div class="locationFound red" id="locationFoundT">no, really, I found it.</div>
   </div>
 </div>
 

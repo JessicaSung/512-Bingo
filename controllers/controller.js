@@ -162,7 +162,7 @@ router.get('/play/:cardName', function(req, res) {
   } else {
     var cardName = req.params.cardName;
     models.Gamecards.findOne({
-      attributes: ['item', 'locations'],
+      attributes: ['card_name', 'item', 'locations'],
       where: {
         card_name: cardName
       }
@@ -204,7 +204,8 @@ router.post('/play/:card', function(req, res) {
         id: active_card
       }
     }).then(function(result) {
-      if(result > 0 && result.dataValues.card_name === cardName) {
+      if(result && result.dataValues.card_name === cardName) {
+        console.log(true);
         // get user's found items
         models.Users.findOne({
           attributes: ['items_found'],

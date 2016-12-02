@@ -43,30 +43,32 @@ $(document).ready(function() {
   $('.mobile-box').on('click', function() {
     box = $(this).attr('data-box');
     boxLocation =$(this).attr('data-location');
-    if(boxLocation == 0) {
-      $('#modalMnoLocation').slideDown();
-    } else if(boxLocation != userLocation) {
-      $('#modalMLocation h4').html("Hmm, it doesn't look like you're there yet!");
-      $('.locationFound').show();
-      $('#modalMLocation').slideDown();
-      setTimeout(function() {
-        $('#modalMLocation').slideUp();
-        $('.locationFound').hide();
-        $('body').css('overflow', 'auto');
-      }, 5000);
-    } else {
-      $('#modalMLocation h4').html("Nice job! You found it.");
-      $('#modalMLocation').slideDown();
-      setTimeout(function() {
-        $('#modalMLocation').slideUp();
-        $('body').css('overflow', 'auto');
-        $('[data-box='+box+'] .star').show();
-        cardToArray(box);
-        foundCardtoDB();
-        completeCardCheck();
-      }, 3000);
+    if(foundBoxes.indexOf(box) == -1) {
+      if(boxLocation == 0) {
+        $('#modalMnoLocation').slideDown();
+      } else if(boxLocation != userLocation) {
+        $('#modalMLocation h4').html("Hmm, it doesn't look like you're there yet!");
+        $('.locationFound').show();
+        $('#modalMLocation').slideDown();
+        setTimeout(function() {
+          $('#modalMLocation').slideUp();
+          $('.locationFound').hide();
+          $('body').css('overflow', 'auto');
+        }, 5000);
+      } else {
+        $('#modalMLocation h4').html("Nice job! You found it.");
+        $('#modalMLocation').slideDown();
+        setTimeout(function() {
+          $('#modalMLocation').slideUp();
+          $('body').css('overflow', 'auto');
+          $('[data-box='+box+'] .star').show();
+          cardToArray(box);
+          foundCardtoDB();
+          completeCardCheck();
+        }, 3000);
+      }
+      $('body').css('overflow', 'hidden');
     }
-    $('body').css('overflow', 'hidden');
   });
 
 
@@ -88,26 +90,28 @@ $(document).ready(function() {
   $('.tablet-box').on('click', function() {
     box = $(this).attr('data-box');
     boxLocation =$(this).attr('data-location');
-    if(boxLocation == 0) {
-      $('#modalTnoLocation').slideDown();
-    } else if(boxLocation != userLocation) {
-      $('#modalTLocation h4').html("Hmm, it doesn't look like you're there yet!");
-      $('.locationFound').show();
-      $('#modalTLocation').slideDown();
-      setTimeout(function() {
-        $('#modalTLocation').slideUp();
-        $('.locationFound').hide();
-      }, 5000);
-    } else {
-      $('#modalTLocation h4').html("Nice job! You found it.");
-      $('#modalTLocation').slideDown();
-      setTimeout(function() {
-        $('#modalTLocation').slideUp();
-        $('[data-box='+box+'] .tablet-star').show();
-        cardToArray(box);
-        foundCardtoDB();
-        completeCardCheck();
-      }, 3000);
+    if(foundBoxes.indexOf(box) == -1) {
+      if(boxLocation == 0) {
+        $('#modalTnoLocation').slideDown();
+      } else if(boxLocation != userLocation) {
+        $('#modalTLocation h4').html("Hmm, it doesn't look like you're there yet!");
+        $('.locationFound').show();
+        $('#modalTLocation').slideDown();
+        setTimeout(function() {
+          $('#modalTLocation').slideUp();
+          $('.locationFound').hide();
+        }, 5000);
+      } else {
+        $('#modalTLocation h4').html("Nice job! You found it.");
+        $('#modalTLocation').slideDown();
+        setTimeout(function() {
+          $('#modalTLocation').slideUp();
+          $('[data-box='+box+'] .tablet-star').show();
+          cardToArray(box);
+          foundCardtoDB();
+          completeCardCheck();
+        }, 3000);
+      }
     }
   });
 

@@ -32,7 +32,8 @@ $(document).ready(function() {
     // gets input for specific box
     var val = $('#'+formNumber+' input').val();
 
-    if(val != '') {
+    if(val != '' && val.length < 20) {
+      errors = false;
       // if a value is present hide form and arrow
       $('#'+formNumber).slideUp();
       $('[data-box='+formNumber+'] .edit-arrow').hide();
@@ -45,6 +46,8 @@ $(document).ready(function() {
       // if all 8 elements have the class done, no errors
       if($('.done').length == 8) {
         errors = false;
+      } else {
+        errors = true;
       }
       // checking for empty values in card name and category
       if($('#cardName').val() == '' || $('#select-cat').val()=='') {
@@ -55,6 +58,11 @@ $(document).ready(function() {
         $('#submit-card').attr('disabled', false);
       }
       console.log(errors);
+    } else {
+      $('#'+formNumber+' .form-error').html("Keep it short and sweet please!").show();
+      setTimeout(function() {
+        $('#'+formNumber+' .form-error').hide()
+      }, 3000);
     }
   });
 

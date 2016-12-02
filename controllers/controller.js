@@ -236,7 +236,8 @@ router.post('/activate/:card', function(req, res) {
     var id = result.dataValues.id;
     models.Users.update(
       {
-        active_card: id
+        active_card: id,
+        items_found: ""
       },
       {
         where: {

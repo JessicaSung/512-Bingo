@@ -478,6 +478,13 @@ h3 {
   display: block;
   z-index: -1; }
 
+.locationFound {
+  text-decoration: underline;
+  display: none;
+  letter-spacing: 2px; }
+  .locationFound:hover {
+    cursor: pointer; }
+
 .mobile-modal {
   display: none;
   width: 100vw;

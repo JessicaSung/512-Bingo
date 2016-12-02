@@ -11,7 +11,7 @@
 <section class="game-board hide-on-med-and-up">
   <h3 class="dark-blue board-title">{{title}}</h3>
   <div class="mobile-board">
-    <div class="menu-box mobile-box" data-box="1">
+    <div class="menu-box mobile-box" data-box="1" data-location="{{locations.[0]}}">
       <div>
         <h4>{{square.[0]}}</h4>
       </div>
@@ -19,7 +19,7 @@
         <img src="/style/images/star.png" alt="star">
       </div>
     </div>
-    <div class="menu-box mobile-box" data-box="2">
+    <div class="menu-box mobile-box" data-box="2" data-location="{{locations.[1]}}">
       <div>
         <h4>{{square.[1]}}</h4>
       </div>
@@ -27,7 +27,7 @@
         <img src="/style/images/star.png" alt="star">
       </div>
     </div>
-    <div class="menu-box mobile-box" data-box="3">
+    <div class="menu-box mobile-box" data-box="3" data-location="{{locations.[2]}}">
       <div>
         <h4>{{square.[2]}}</h4>
       </div>
@@ -35,7 +35,7 @@
         <img src="/style/images/star.png" alt="star">
       </div>
     </div>
-    <div class="menu-box mobile-box" data-box="4">
+    <div class="menu-box mobile-box" data-box="4" data-location="{{locations.[3]}}">
       <div>
         <h4>{{square.[3]}}</h4>
       </div>
@@ -43,7 +43,7 @@
         <img src="/style/images/star.png" alt="star">
       </div>
     </div>
-    <div class="menu-box mobile-box" data-box="5">
+    <div class="menu-box mobile-box" data-box="5" data-location="{{locations.[4]}}">
       <div>
         <h4>{{square.[4]}}</h4>
       </div>
@@ -51,7 +51,7 @@
         <img src="/style/images/star.png" alt="star">
       </div>
     </div>
-    <div class="menu-box mobile-box" data-box="6">
+    <div class="menu-box mobile-box" data-box="6" data-location="{{locations.[5]}}">
       <div>
         <h4>{{square.[5]}}</h4>
       </div>
@@ -59,7 +59,7 @@
         <img src="/style/images/star.png" alt="star">
       </div>
     </div>
-    <div class="menu-box mobile-box" data-box="7">
+    <div class="menu-box mobile-box" data-box="7" data-location="{{locations.[6]}}">
       <div>
         <h4>{{square.[6]}}</h4>
       </div>
@@ -67,7 +67,7 @@
         <img src="/style/images/star.png" alt="star">
       </div>
     </div>
-    <div class="menu-box mobile-box" data-box="8">
+    <div class="menu-box mobile-box" data-box="8" data-location="{{locations.[7]}}">
       <div>
         <h4>{{square.[7]}}</h4>
       </div>
@@ -78,8 +78,8 @@
   </div>
 </section>
 
-<!-- Mobile Modal -->
-<div class="mobile-modal hide-on-med-and-up">
+<!-- Mobile Modal No Location -->
+<div class="mobile-modal hide-on-med-and-up" id="modalMnoLocation">
   <div class="modal-message">
     <h4>Awesome! <br />You found it?</h4>
     <button class="medium-button notFound red-box">Oh....no</button>
@@ -87,11 +87,19 @@
   </div>
 </div>
 
+<!-- Mobile Modal With Location -->
+<div class="mobile-modal hide-on-med-and-up" id="modalMLocation">
+  <div class="modal-message">
+    <h4></h4>
+    <div class="locationFound red" id="locationFoundM">no, really, I found it.</div>
+  </div>
+</div>
+
 <!-- tablet+ game board -->
 <section class="game-board hide-on-small-only">
   <h3 class="orange board-title">{{title}}</h3>
   <div class="tablet-board">
-    <div class="menu-box tablet-box" data-box="1">
+    <div class="menu-box tablet-box" data-box="1" data-location="{{locations.[0]}}">
       <div>
         <h4>{{square.[0]}}</h4>
       </div>
@@ -99,7 +107,7 @@
         <img src="/style/images/star.png" alt="star">
       </div>
     </div>
-    <div class="menu-box tablet-box" data-box="2">
+    <div class="menu-box tablet-box" data-box="2" data-location="{{locations.[1]}}">
       <div>
         <h4>{{square.[1]}}</h4>
       </div>
@@ -107,7 +115,7 @@
         <img src="/style/images/star.png" alt="star">
       </div>
     </div>
-    <div class="menu-box tablet-box" data-box="3">
+    <div class="menu-box tablet-box" data-box="3" data-location="{{locations.[2]}}">
       <div>
         <h4>{{square.[2]}}</h4>
       </div>
@@ -115,7 +123,7 @@
         <img src="/style/images/star.png" alt="star">
       </div>
     </div>
-    <div class="menu-box tablet-box" data-box="4">
+    <div class="menu-box tablet-box" data-box="4" data-location="{{locations.[3]}}">
       <div>
         <h4>{{square.[3]}}</h4>
       </div>
@@ -131,7 +139,7 @@
         <img src="/style/images/star.png" alt="star">
       </div>
     </div>
-    <div class="menu-box tablet-box" data-box="5">
+    <div class="menu-box tablet-box" data-box="5" data-location="{{locations.[4]}}">
       <div>
         <h4>{{square.[4]}}</h4>
       </div>
@@ -139,7 +147,7 @@
         <img src="/style/images/star.png" alt="star">
       </div>
     </div>
-    <div class="menu-box tablet-box" data-box="6">
+    <div class="menu-box tablet-box" data-box="6" data-location="{{locations.[5]}}">
       <div>
         <h4>{{square.[5]}}</h4>
       </div>
@@ -147,7 +155,7 @@
         <img src="/style/images/star.png" alt="star">
       </div>
     </div>
-    <div class="menu-box tablet-box" data-box="7">
+    <div class="menu-box tablet-box" data-box="7" data-location="{{locations.[6]}}">
       <div>
         <h4>{{square.[6]}}</h4>
       </div>
@@ -155,7 +163,7 @@
         <img src="/style/images/star.png" alt="star">
       </div>
     </div>
-    <div class="menu-box tablet-box" data-box="8">
+    <div class="menu-box tablet-box" data-box="8" data-location="{{locations.[7]}}">
       <div>
         <h4>{{square.[7]}}</h4>
       </div>
@@ -166,12 +174,20 @@
   </div>
 </section>
 
-<!-- Tablet Modal -->
-<div class="tablet-modal hide-on-small-only">
+<!-- Tablet Modal No Location -->
+<div class="tablet-modal hide-on-small-only" id="modalTnoLocation">
   <div class="modal-message">
     <h4>Awesome! You found it?</h4>
     <button class="medium-button red-box notFound">Oh...no</button>
     <button class="medium-button blue-box found">You bet</button>
+  </div>
+</div>
+
+<!-- Tablet Modal With Location -->
+<div class="tablet-modal hide-on-small-only" id="modalTLocation">
+  <div class="modal-message">
+    <h4></h4>
+    <div class="locationFound red" id="locationFoundT">no, really, I found it.</div>
   </div>
 </div>
 

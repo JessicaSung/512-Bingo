@@ -646,6 +646,15 @@ h3 {
   z-index: -1;
 }
 
+.locationFound {
+  text-decoration: underline;
+  display: none;
+  letter-spacing: 2px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
 .mobile-modal {
   display: none;
   width: 100vw;

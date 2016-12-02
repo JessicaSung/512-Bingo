@@ -169,9 +169,9 @@ router.get('/play/:cardName', function(req, res) {
     }).then(function(result) {
       console.log(result.dataValues);
       var itemString = result.dataValues.item;
-      var itemParsed = itemString.split(', ');
+      var itemParsed = itemString.split(',');
       var locationString = result.dataValues.locations;
-      var locationParsed = locationString.split(',');
+      var locationParsed = locationString.split('');
       console.log(locationParsed);
       var data = {
         square: itemParsed,
@@ -318,7 +318,8 @@ router.post('/add', function(req, res) {
   models.Gamecards.create({
     card_name: data[0],
     category: data[1],
-    item: boxes
+    item: boxes,
+    locations: "0,0,0,0,0,0,0,0"
   }).then(function() {
     res.redirect('menu');
   })

@@ -459,6 +459,9 @@ h3 {
     color: #e95e6c;
     border-color: #e95e6c; }
 
+.square {
+  width: 200px; }
+
 .star {
   display: none;
   position: absolute;

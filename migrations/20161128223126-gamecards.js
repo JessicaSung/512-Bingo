@@ -16,7 +16,7 @@ module.exports = {
           card_name: "We're all a little weird",
           item: "Bum Fighting,Esther’s Follies,Chicken Shit Bingo, Hippie Hollow,Leslie Cochran Statue,Cathe-dral of Junk, Museum Of The Weird,Street Dancing Guy",
           category: "Weird",
-          locations: "0,30.2662946 -97.7396917,30.3796095 -97.7439399,30.41316 -97.8862543,0,30.2186476 -97.7737523,30.2670632 -97.7409236,0"
+          locations: "0,30.2662946 -97.7396917,30.3798964,-97.7416998 30.41316 -97.8862543,0,30.2186476 -97.7737523,30.2670632 -97.7409236,0"
         },
         {
           card_name: "Selfie Spots",

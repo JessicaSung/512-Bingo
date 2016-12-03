@@ -171,7 +171,7 @@ router.get('/play/:cardName', function(req, res) {
       var itemString = result.dataValues.item;
       var itemParsed = itemString.split(',');
       var locationString = result.dataValues.locations;
-      var locationParsed = locationString.split('');
+      var locationParsed = locationString.split(',');
       console.log(locationParsed);
       var data = {
         square: itemParsed,

@@ -51,3 +51,11 @@ Contributors:
 * Github
 * Git Bash
 * Sublime Text 3
+
+
+Icon credits: 
+* Bicycle - Alex Valdivia
+* Weird monster - Ana Lourenco
+* Austin Skyline - Vonn Weisenberger
+* Armadillo - Mario Ramirez
+* Food Truck - Olivier Guin

@@ -54,7 +54,7 @@ $(document).ready(function() {
           $('#modalMLocation').slideUp();
           $('.locationFound').hide();
           $('body').css('overflow', 'auto');
-        }, 5000);
+        }, 3000);
       } else {
         $('#modalMLocation h4').html("Nice job! You found it.");
         $('#modalMLocation').slideDown();
@@ -100,7 +100,7 @@ $(document).ready(function() {
         setTimeout(function() {
           $('#modalTLocation').slideUp();
           $('.locationFound').hide();
-        }, 5000);
+        }, 3000);
       } else {
         $('#modalTLocation h4').html("Nice job! You found it.");
         $('#modalTLocation').slideDown();
